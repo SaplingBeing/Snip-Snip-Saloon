@@ -1,0 +1,111 @@
+/* Justin D. Grumal 240005134 */
+html, body{
+    overflow-x: hidden;
+}
+body{
+    background-color: #F3EFE7;
+    background-image: url(./Images/bg.jpg);
+    background-repeat: repeat;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+p, .nav-link{
+    font-family: 'Josefin Sans';
+    font-size: 1rem;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Bodoni Moda';
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.white{
+    color: #f1f1f1;
+}
+/* Navigation bar */
+.navbar{
+    padding-top: 0px;
+}
+.navbar-brand{
+    margin: 0px;
+    padding-left: 20px;
+}
+#navLinks{
+    padding-top: 25px;
+}
+.nav-link{
+    color: #464646;
+    text-align: center;
+}
+.nav-link:hover{
+    color: #1e1e1e;
+    text-decoration: underline;
+}
+#bookNow{
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #702F3E;
+    background-image: url(./Images/bg2.jpg);
+    background-repeat: none;
+    filter: drop-shadow(0px 0px 20px #080808);
+    border-radius: 0px 0px 20px 20px;
+    padding: 35px 32.685px 18px 32.685px;
+}
+/* Offcanvas */
+.offcanvas{
+    background-color: #F3EFE7;
+    background-image: url(./Images/bg.jpg);
+    background-repeat: repeat;
+}
+.offcanvas:not(.show){
+    background-image: none;
+}
+.navbar-toggler, .navbar-toggler::after, .btn-close, .btn-close::after{
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+/* Footer */
+footer{
+    background-color: #403531;
+    background-image: url(./Images/bg3.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 10px;
+}
+#footerLogo{
+    float: left;
+}
+#footerText{
+    font-size: 0.8rem;
+}
+.footer-item{
+    display: inline;
+    list-style: none;
+    padding-right: 20px;
+}
+/* Animation */
+.fadeExit{
+    animation: fadeExit;
+    animation-timeline: view();
+    animation-range: exit;
+}
+@keyframes fadeExit{
+    from {scale: 1; opacity: 1;}
+    to {scale: 0.8; opacity: 0;}
+}
+.offcanvas-top {
+    height: 40vh !important;
+}
+/* Media Query */
+@media (max-width: 600px) {
+    body{
+        padding: 0px;
+    }
+}
