@@ -23,6 +23,9 @@
 </head>
 <body>
     <div class="row">
+        <div class="col-6"><a href="./index.html"><i class="bi bi-x-circle-fill"></i></a></div>
+    </div>
+    <div class="row">
         <div class="col-md-6" id="formContainer">
             <!-- Tabs -->
             <nav>   
@@ -58,7 +61,7 @@
                                                     <p class="card-text">$50 | 30 mins</p>
                                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                     <input type="checkbox" class="btn-check" id="standardCutBtn">
-                                                    <label class="btn btn-primary" for="standardCutBtn">+</label>
+                                                    <label class="btn cardBtn" for="standardCutBtn">+</label>
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -67,7 +70,7 @@
                                                     <p class="card-text">$80 | 60 mins</p>
                                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                     <input type="checkbox" class="btn-check" id="scissorCutBtn">
-                                                    <label class="btn btn-primary" for="scissorCutBtn">+</label>
+                                                    <label class="btn cardBtn" for="scissorCutBtn">+</label>
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -76,7 +79,7 @@
                                                     <p class="card-text">$70 | 60 mins</p>
                                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                     <input type="checkbox" class="btn-check" id="fadeCutBtn">
-                                                    <label class="btn btn-primary" for="fadeCutBtn">+</label>
+                                                    <label class="btn cardBtn" for="fadeCutBtn">+</label>
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -85,7 +88,7 @@
                                                     <p class="card-text">$40 | 30 mins</p>
                                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                     <input type="checkbox" class="btn-check" id="buzzCutBtn">
-                                                    <label class="btn btn-primary" for="buzzCutBtn">+</label>
+                                                    <label class="btn cardBtn" for="buzzCutBtn">+</label>
                                                 </div>
                                             </div>
                                             </div>
@@ -106,7 +109,7 @@
                                                         <p class="card-text">$30 | 30 mins</p>
                                                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                         <input type="checkbox" class="btn-check" id="trimBeardBtn">
-                                                        <label class="btn btn-primary" for="trimBeardBtn">+</label>
+                                                        <label class="btn cardBtn" for="trimBeardBtn">+</label>
                                                     </div>
                                                 </div>
                                                 <div class="card">
@@ -115,7 +118,7 @@
                                                         <p class="card-text">$50 | 60 mins</p>
                                                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                         <input type="checkbox" class="btn-check" id="fullBeardBtn">
-                                                        <label class="btn btn-primary" for="fullBeardBtn">+</label>
+                                                        <label class="btn cardBtn" for="fullBeardBtn">+</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -136,7 +139,7 @@
                                                         <p class="card-text">$500 | 240 mins</p>
                                                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                         <input type="checkbox" class="btn-check" id="treatmentBtn">
-                                                        <label class="btn btn-primary" for="treatmentBtn">+</label>
+                                                        <label class="btn cardBtn" for="treatmentBtn">+</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,7 +152,54 @@
                     </div>
                     <!-- Staff -->
                     <div class="tab-pane" id="navStaff">
-
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="text-uppercase">Staff</h1>
+                                <p class="text-uppercase">Select your preferred staff from below:</p>
+                                <hr>
+                                <!-- No Preference -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-uppercase">No Preference</h5>
+                                        <p class="card-text">Maximum Availability</p>
+                                        <input type="checkbox" class="btn-check" id="noStaffBtn">
+                                        <label class="btn btn-primary text-uppercase" for="noStaffBtn">Select</label>
+                                    </div>
+                                </div>
+                                <!-- Marcie Stuward -->
+                                <div class="card">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./CSS/Images/marcieHairdresser.png" class="img-fluid rounded-start">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-uppercase">Marcie Stuward</h5>
+                                                <p class="card-text">Senior hairdresser</p>
+                                                <input type="checkbox" class="btn-check" id="marcieStaffBtn">
+                                                <label class="btn btn-primary text-uppercase" for="marcieStaffBtn">Select</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Sadie Nguyen-->
+                                 <div class="card">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./CSS/Images/sadieHairdresser.png" class="img-fluid rounded-start">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-uppercase">Sadie Nguyen</h5>
+                                                <p class="card-text">Junior hairdresser</p>
+                                                <input type="checkbox" class="btn-check" id="sadieStaffBtn">
+                                                <label class="btn btn-primary text-uppercase" for="sadieStaffBtn">Select</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- First Name & Last Name -->
                     <div class="tab-pane" id="navContact">
@@ -179,17 +229,20 @@
                 <div class="col-12">
                     <h1 class="text-uppercase">Booking Summary</h1>
                     <hr>
+                    <h2 class="text-uppercase">Chosen Service</h2>
+                    <h5 class="d-flex justify-content-between text-uppercase">Name<span>Price</span></h5>
                     <p id="bookingPlaceHolder">No services selected</p>
                     <ul id="bookingList"></ul>
+                    <hr>
                     <div class="row">
                         <div class="col-6">
                             <h2 class="text-uppercase">Total:</h2>
                         </div>
                         <div class="col-6">
-                            <h2 id="totalPrice"></h2>
+                            <h2 id="totalPrice" style="text-align: right;"></h2>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" id="conta">Continue</button>
+                    <button type="button" class="btn btn-primary text-uppercase" id="conta">Continue</button>
                 </div>
             </div>
         </div>

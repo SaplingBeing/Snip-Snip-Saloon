@@ -11,6 +11,7 @@ $(document).ready(function(){
     $("#navTabServices").click(function(){
         $("#navTabStaff").addClass("disabled");
     });
+
     // Services
     // If no services is selected, a msg will display
     function isServiceEmpty(){
@@ -32,13 +33,17 @@ $(document).ready(function(){
             total -= 50;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="standardCutBtn"]').text("+");
+            $('label[for="scissorCutBtn"],label[for="fadeCutBtn"],label[for="buzzCutBtn"]').removeClass("disabled");
         }
         else{
             serviceList.push("standardHaircut");
-            $("#bookingList").append("<li id='standardCutList'>Standard Haircut</li>");
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='standardCutList'>Standard Haircut<span class='preferredStaff'></span><span>$50</span></li>");
             total += 50;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="standardCutBtn"]').text("-");
+            $("label[for='scissorCutBtn'],label[for='fadeCutBtn'],label[for='buzzCutBtn']").addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
@@ -53,6 +58,8 @@ $(document).ready(function(){
             total -= 80;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="scissorCutBtn"]').text("+");
+            $('label[for="standardCutBtn"],label[for="fadeCutBtn"],label[for="buzzCutBtn"]').removeClass("disabled");
         }
         else{
             serviceList.push("scissorCut");
@@ -60,6 +67,8 @@ $(document).ready(function(){
             total += 80;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="scissorCutBtn"]').text("-");
+            $('label[for="standardCutBtn"],label[for="fadeCutBtn"],label[for="buzzCutBtn"]').addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
@@ -74,6 +83,8 @@ $(document).ready(function(){
             total -= 70;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="fadeCutBtn"]').text("+");
+            $('label[for="scissorCutBtn"],label[for="standardCutBtn"],label[for="buzzCutBtn"]').removeClass("disabled");
         }
         else{
             serviceList.push("fadeCut");
@@ -81,6 +92,8 @@ $(document).ready(function(){
             total += 70;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="fadeCutBtn"]').text("-");
+            $('label[for="scissorCutBtn"],label[for="standardCutBtn"],label[for="buzzCutBtn"]').addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
@@ -95,6 +108,8 @@ $(document).ready(function(){
             total -= 40;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="buzzCutBtn"]').text("+");
+            $('label[for="scissorCutBtn"],label[for="fadeCutBtn"],label[for="standardCutBtn"]').removeClass("disabled");
         }
         else{
             serviceList.push("buzzCut");
@@ -102,6 +117,8 @@ $(document).ready(function(){
             total += 40;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="buzzCutBtn"]').text("-");
+            $('label[for="scissorCutBtn"],label[for="fadeCutBtn"],label[for="standardCutBtn"]').addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
@@ -116,13 +133,17 @@ $(document).ready(function(){
             total -= 30;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="trimBeardBtn"]').text("+");
+            $('label[for="fullBeardBtn"]').removeClass("disabled");
         }
         else{
             serviceList.push("trimBeard");
-            $("#bookingList").append("<li id='trimBeardList'>Beard Trim</li>");
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='trimBeardList'>Beard Trim<span class='preferredStaff'></span><span>$30</span></li>");
             total += 30;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="trimBeardBtn"]').text("-");
+            $('label[for="fullBeardBtn"]').addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
@@ -137,6 +158,8 @@ $(document).ready(function(){
             total -= 50;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="fullBeardBtn"]').text("+");
+            $('label[for="trimBeardBtn"]').removeClass("disabled");
         }
         else{
             serviceList.push("fullBeard");
@@ -144,6 +167,8 @@ $(document).ready(function(){
             total += 50;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $('label[for="fullBeardBtn"]').text("-");
+            $('label[for="trimBeardBtn"]').addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
@@ -168,5 +193,19 @@ $(document).ready(function(){
         }
         console.log(serviceList);
         console.log(total);
+    });
+
+    // Staff
+    // No Prefference
+    $("#noStaffBtn").click(function(){
+        if($(".preferredStaff").is(":empty")){
+            $(".preferredStaff").text("No Preference");
+            $("label[for='noStaffBtn']").text("Selected")
+        }
+        else{
+            $(".preferredStaff").empty();
+            $("label[for='noStaffBtn']").text("Select")
+        }
+        
     });
 });
