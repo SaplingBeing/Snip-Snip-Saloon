@@ -1,0 +1,9 @@
+/* Justin D. Grumal 240005134 */
+#formContainer{
+    background-color: #8c8c8c;
+}
+#test{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+}

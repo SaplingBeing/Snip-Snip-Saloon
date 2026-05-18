@@ -4,16 +4,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNIP SNIP - BOOKING</title>
+    <title>Snip Snip - Booking</title>
+    <link rel="icon" type="FavIcon" href="./CSS/Images/FavIcon.svg">
     <!-- Bootstrap  CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Stylesheet -->
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Barcode+128&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./CSS/universalStylesheet.css">
-    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/bookingStylesheet.css">
+    <!-- JavaScript -->
+    <script src="./JavaScript/booking.js"></script>
 </head>
 <body>
-    
+    <div class="row">
+        <div class="col-md-6" id="formContainer">
+            <!-- Tabs -->
+            <nav>   
+                <div class="nav nav-tabs" id="navTabs">
+                    <button class="nav-link active" id="navTabServices" data-bs-toggle="tab" data-bs-target="#navServices">Services</button>
+                    <button class="nav-link disabled" id="navTabStaff" data-bs-toggle="tab" data-bs-target="#navStaff">Staff</button>
+                    <button class="nav-link disabled" id="navTabDateTime" data-bs-toggle="tab" data-bs-target="#navDateTime">Date & Time</button>
+                    <button class="nav-link disabled" id="navTabContact"  data-bs-toggle="tab" data-bs-target="#navContact">Contact</button>
+                </div>
+            </nav>
+            <form>
+                <div class="tab-content">
+                    <!-- Services -->
+                    <div class="tab-pane active" id="navServices">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="text-uppercase">Services</h1>
+                                <p class="text-uppercase">Select a service(s) from below:</p>
+                                <hr>
+                                <div class="accordion" id="services">
+                                    <!-- Haircuts -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#haircutCollapse">
+                                                <h2 class="text-uppercase">Haircuts</h2>
+                                            </button>
+                                        </div>
+                                        <div id="haircutCollapse" class="accordion-collapse collapse" data-bs-parent="services">
+                                            <div class="accordion-body">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-uppercase">Standard Haircut</h5>
+                                                    <p class="card-text">$50 | 30 mins</p>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                    <input type="checkbox" class="btn-check" id="standardCutBtn">
+                                                    <label class="btn btn-primary" for="standardCutBtn">+</label>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-uppercase">Scissor Cut</h5>
+                                                    <p class="card-text">$80 | 60 mins</p>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                    <input type="checkbox" class="btn-check" id="scissorCutBtn">
+                                                    <label class="btn btn-primary" for="scissorCutBtn">+</label>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-uppercase">Fade</h5>
+                                                    <p class="card-text">$70 | 60 mins</p>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                    <input type="checkbox" class="btn-check" id="fadeCutBtn">
+                                                    <label class="btn btn-primary" for="fadeCutBtn">+</label>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-uppercase">Buzz cut</h5>
+                                                    <p class="card-text">$40 | 30 mins</p>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                    <input type="checkbox" class="btn-check" id="buzzCutBtn">
+                                                    <label class="btn btn-primary" for="buzzCutBtn">+</label>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Men's Beard -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beardCollapse">
+                                                <h2 class="text-uppercase">Men's Beard</h2>
+                                            </button>
+                                        </div>
+                                        <div id="beardCollapse" class="accordion-collapse collapse" data-bs-parent="services">
+                                            <div class="accordion-body">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-uppercase">Beard Trim</h5>
+                                                        <p class="card-text">$30 | 30 mins</p>
+                                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                        <input type="checkbox" class="btn-check" id="trimBeardBtn">
+                                                        <label class="btn btn-primary" for="trimBeardBtn">+</label>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-uppercase">Full Shave</h5>
+                                                        <p class="card-text">$50 | 60 mins</p>
+                                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                        <input type="checkbox" class="btn-check" id="fullBeardBtn">
+                                                        <label class="btn btn-primary" for="fullBeardBtn">+</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Keratin Treatment -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#treatmentCollapse">
+                                                <h2 class="text-uppercase">Keratin Treatment</h2>
+                                            </button>
+                                        </div>
+                                        <div id="treatmentCollapse" class="accordion-collapse collapse" data-bs-parent="services">
+                                            <div class="accordion-body">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-uppercase">Keratin Treatment</h5>
+                                                        <p class="card-text">$500 | 240 mins</p>
+                                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                        <input type="checkbox" class="btn-check" id="treatmentBtn">
+                                                        <label class="btn btn-primary" for="treatmentBtn">+</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff -->
+                    <div class="tab-pane" id="navStaff">
+
+                    </div>
+                    <!-- First Name & Last Name -->
+                    <div class="tab-pane" id="navContact">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="inputFirstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="inputFirstName">
+                            </div>
+                            <div class="col-6">
+                                <label for="inputLastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="inputLastName">
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6" id="formContainer">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-uppercase">Booking Summary</h1>
+                    <hr>
+                    <p id="bookingPlaceHolder">No services selected</p>
+                    <ul id="bookingList"></ul>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="text-uppercase">Total:</h2>
+                        </div>
+                        <div class="col-6">
+                            <h2 id="totalPrice"></h2>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="conta">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
