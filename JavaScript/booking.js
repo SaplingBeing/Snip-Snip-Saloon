@@ -2,14 +2,22 @@
 $(document).ready(function(){
     var serviceList = [];
     var total = 0;
-
+    // Continue Btn
     $("#conta").click(function(){
-        if(total > 0){
+        if($("#navTabServices").hasClass("active")&&total>0){
             $("#navTabStaff").removeClass("disabled").click();
+            $("#staffContainer").append("<p id='staffPlaceholder'>No staff selected</p>");
+        }
+        else if($("#noStaffBtn").prop("checked")||$("#marcieStaffBtn").prop("checked")||$("#sadieStaffBtn").prop("checked")){
+            console.log("IT WORKS");
+            $("#navTabDateTime").removeClass("disabled").click();
         }
     });
     $("#navTabServices").click(function(){
         $("#navTabStaff").addClass("disabled");
+        $("#staffContainer").empty();
+        $("#noStaffBtn,#marcieStaffBtn,#sadieStaffBtn").prop("checked",false);
+        $("label[for='noStaffBtn'],label[for='marcieStaffBtn'],label[for='sadieStaffBtn']").text("+").removeClass("disabled");
     });
 
     // Services
@@ -198,14 +206,69 @@ $(document).ready(function(){
     // Staff
     // No Prefference
     $("#noStaffBtn").click(function(){
-        if($(".preferredStaff").is(":empty")){
-            $(".preferredStaff").text("No Preference");
-            $("label[for='noStaffBtn']").text("Selected")
+        if($("#noStaffBtn").prop("checked")){
+            $("#staffPlaceholder").text("Preference: None");
+            $("label[for='noStaffBtn']").text("-");
+            $("label[for='marcieStaffBtn'],label[for='sadieStaffBtn']").addClass("disabled");
         }
         else{
-            $(".preferredStaff").empty();
-            $("label[for='noStaffBtn']").text("Select")
+            $("#staffPlaceholder").text("No staff selected");
+            $("label[for='noStaffBtn']").text("+");
+            $("label[for='marcieStaffBtn'],label[for='sadieStaffBtn']").removeClass("disabled");
+        }
+    });
+    // Marcie Stuward
+    $("#marcieStaffBtn").click(function(){
+        if($("#marcieStaffBtn").prop("checked")){
+            $("#staffPlaceholder").text("Preference: Marcie Stuward");
+            $("label[for='marcieStaffBtn']").text("-");
+            $("label[for='noStaffBtn'],label[for='sadieStaffBtn']").addClass("disabled");
+        }
+        else{
+            $("#staffPlaceholder").text("No staff selected");
+            $("label[for='marcieStaffBtn']").text("+");
+            $("label[for='noStaffBtn'],label[for='sadieStaffBtn']").removeClass("disabled");
+        }
+    });
+    // Sadie Nguyen
+    $("#sadieStaffBtn").click(function(){
+        if($("#sadieStaffBtn").prop("checked")){
+            $("#staffPlaceholder").text("Preference: Sadie Nguyen");
+            $("label[for='sadieStaffBtn']").text("-");
+            $("label[for='noStaffBtn'],label[for='marcieStaffBtn']").addClass("disabled");
+        }
+        else{
+            $("#staffPlaceholder").text("No staff selected");
+            $("label[for='sadieStaffBtn']").text("+");
+            $("label[for='noStaffBtn'],label[for='marcieStaffBtn']").removeClass("disabled");
+        }
+    });
+
+    // Date Picker 
+    datePicker.min = new Date().toLocaleDateString("fr-ca");
+    
+    $("#datePicker").on("change",function(){
+        if($('#datePicker').val() === ""){
+            console.log("No date selected");
+            $("label[for='nine'], label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").removeClass("collapse.show").addClass("collapse");
+            $("#dateTimeContainer").empty();
+        }
+        else{
+            console.log("Date selected");
+            $("label[for='nine'], label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").removeClass("collapse").addClass("collapse.show");
+        }
+    });
+
+    $("#nine").click(function(){
+        if($("#nine").prop("checked")){
+            $("#dateTimeContainer").append("<p>Date: "+$('#datePicker').val()+" | Time: 09:00</p>");
+            $("label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").addClass("disabled");
+        }
+        else{
+            $("#dateTimeContainer").empty();
+            $("label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").removeClass("disabled");
         }
         
     });
+    
 });
