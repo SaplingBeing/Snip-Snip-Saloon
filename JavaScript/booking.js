@@ -8,10 +8,10 @@ $(document).ready(function(){
             $("#navTabStaff").removeClass("disabled").click();
             $("#staffContainer").append("<p id='staffPlaceholder'>No staff selected</p>");
         }
-        else if($("#navTabStaff").hasClass("active")&&($("#noStaffBtn").prop("checked")||$("#marcieStaffBtn").prop("checked")||$("#sadieStaffBtn").prop("checked"))){
+        else if($("#navTabStaff").hasClass("active")&&$(".staff").is(":checked")){
             $("#navTabDateTime").removeClass("disabled").click();
         }
-        else if($("#navTabDateTime").hasClass("active")&&$(".time:checked").length>0){
+        else if($("#navTabDateTime").hasClass("active")&&$(".time").is(":checked")){
             $("#navTabContact").removeClass("disabled").click();
             $("#continueBtn").text("Submit").prop("type","submit");
         }
@@ -92,7 +92,7 @@ $(document).ready(function(){
         }
         else{
             serviceList.push(name);
-            $("#bookingList").append("<li class='d-flex justify-content-between' id='scissorCutList'>"+name+"<span>NZ$"+price+"</li>");
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='scissorCutList'>"+name+"<span>NZ$"+price+"</span></li>");
             total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
@@ -118,7 +118,7 @@ $(document).ready(function(){
         }
         else{
             serviceList.push(name);
-            $("#bookingList").append("<li class='d-flex justify-content-between' id='fadeCutList'>"+name+"<span>NZ$"+price+"</li>");
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='fadeCutList'>"+name+"<span>NZ$"+price+"</span></li>");
             total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
@@ -144,7 +144,7 @@ $(document).ready(function(){
         }
         else{
             serviceList.push(name);
-            $("#bookingList").append("<li class='d-flex justify-content-between' id='buzzCutList'>"+name+"<span>NZ$"+price+"</li>");
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='buzzCutList'>"+name+"<span>NZ$"+price+"</span></li>");
             total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
@@ -156,71 +156,76 @@ $(document).ready(function(){
     });
     // Beard Trim
     $("#trimBeardBtn").click(function(){
-        if(serviceList.includes("trimBeard") == true){ 
-            const target = "trimBeard";
-            const index = serviceList.indexOf(target);
+        const name = "Beard Trim";
+        const price = 30;
+        if(serviceList.includes(name) == true){ 
+            const index = serviceList.indexOf(name);
             serviceList.splice(index, 1);
             $("#trimBeardList").remove();
-            total -= 30;
+            total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="trimBeardBtn"]').text("+");
-            $('label[for="fullBeardBtn"]').removeClass("disabled");
+            $("label[for='trimBeardBtn']").text("+");
+            $("label[for='fullBeardBtn']").removeClass("disabled");
         }
         else{
-            serviceList.push("trimBeard");
-            $("#bookingList").append("<li class='d-flex justify-content-between' id='trimBeardList'>Beard Trim<span class='preferredStaff'></span><span>$30</span></li>");
-            total += 30;
+            serviceList.push(name);
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='trimBeardList'>"+name+"<span>NZ$"+price+"</span></li>");
+            total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="trimBeardBtn"]').text("-");
-            $('label[for="fullBeardBtn"]').addClass("disabled");
+            $("label[for='trimBeardBtn']").text("-");
+            $("label[for='fullBeardBtn']").addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
     });
     // Full Shave
     $("#fullBeardBtn").click(function(){
-        if(serviceList.includes("fullBeard") == true){ 
-            const target = "fullBeard";
-            const index = serviceList.indexOf(target);
+        const name = "Full Shave";
+        const price = 50;
+        if(serviceList.includes(name) == true){ 
+            const index = serviceList.indexOf(name);
             serviceList.splice(index, 1);
             $("#fullBeardList").remove();
-            total -= 50;
+            total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="fullBeardBtn"]').text("+");
-            $('label[for="trimBeardBtn"]').removeClass("disabled");
+            $("label[for='fullBeardBtn']").text("+");
+            $("label[for='trimBeardBtn']").removeClass("disabled");
         }
         else{
-            serviceList.push("fullBeard");
-            $("#bookingList").append("<li id='fullBeardList'>Full Shave</li>");
-            total += 50;
+            serviceList.push(name);
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='fullBeardList'>"+name+"<span>NZ$"+price+"</span></li>");
+            total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="fullBeardBtn"]').text("-");
-            $('label[for="trimBeardBtn"]').addClass("disabled");
+            $("label[for='fullBeardBtn']").text("-");
+            $("label[for='trimBeardBtn']").addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
     });
     // Keratin Treatment
     $("#treatmentBtn").click(function(){
-        if(serviceList.includes("treatment") == true){ 
-            const target = "treatment";
-            const index = serviceList.indexOf(target);
+        const name = "Keratin Treatment";
+        const price = 500;
+        if(serviceList.includes(name) == true){ 
+            const index = serviceList.indexOf(name);
             serviceList.splice(index, 1);
             $("#treatmentList").remove();
-            total -= 500;
+            total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $("label[for='treatmentBtn']").text("+");
         }
         else{
-            serviceList.push("treatment");
-            $("#bookingList").append("<li id='treatmentList'>Keratin Treatment</li>");
-            total += 500;
+            serviceList.push(name);
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='treatmentList'>"+name+"<span>NZ$"+price+"</span></li>");
+            total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
+            $("label[for='treatmentBtn']").text("-");
         }
         console.log(serviceList);
         console.log(total);
