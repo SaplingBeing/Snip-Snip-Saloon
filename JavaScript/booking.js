@@ -16,6 +16,7 @@ $(document).ready(function(){
             $("#continueBtn").text("Submit").prop("type","submit");
         }
     });
+    
     // Tabs Function
     $("#navTabServices").click(function(){
         $("button[data-bs-toggle='tab']:not(#navTabServices)").addClass("disabled");
@@ -37,6 +38,22 @@ $(document).ready(function(){
     $("#navTabDateTime").click(function(){
         $("#navTabContact").addClass("disabled");
         $("#agreeTermsConditions").prop("checked",false);
+    });
+
+    // Back Button
+    $("#backBtn").click(function(){
+        if($("#navTabServices").hasClass("active")){
+            window.location.href = "./index.html";
+        }
+        else if($("#navTabStaff").hasClass("active")){
+            $("#navTabServices").click();
+        }
+        else if($("#navTabDateTime").hasClass("active")){
+            $("#navTabStaff").click();
+        }
+        else if($("#navTabContact").hasClass("active")){
+            $("#navTabDateTime").click();
+        }
     });
 
     // Services
