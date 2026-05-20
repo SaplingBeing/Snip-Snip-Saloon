@@ -2,8 +2,8 @@
 $(document).ready(function(){
     var serviceList = [];
     var total = 0;
-    // Continue Btn
-    $("#conta").click(function(){
+    // Continue Button
+    $("#continueBtn").click(function(){
         if($("#navTabServices").hasClass("active")&&total>0){
             $("#navTabStaff").removeClass("disabled").click();
             $("#staffContainer").append("<p id='staffPlaceholder'>No staff selected</p>");
@@ -13,14 +13,30 @@ $(document).ready(function(){
         }
         else if($("#navTabDateTime").hasClass("active")&&$(".time:checked").length>0){
             $("#navTabContact").removeClass("disabled").click();
-            $("#conta").text("Submit").prop('type', 'submit');
+            $("#continueBtn").text("Submit").prop("type","submit");
         }
     });
+    // Tabs Function
     $("#navTabServices").click(function(){
-        $("#navTabStaff").addClass("disabled");
-        $("#staffContainer").empty();
-        $("#noStaffBtn,#marcieStaffBtn,#sadieStaffBtn").prop("checked",false);
-        $(".staff").text("+").removeClass("disabled");
+        $("button[data-bs-toggle='tab']:not(#navTabServices)").addClass("disabled");
+        $("#staffContainer, #dateTimeContainer").empty();
+        $(".staff,.time,#agreeTermsConditions").prop("checked",false);
+        $(".staffBtn,.timeBtn").removeClass("disabled");
+        $(".staffBtn").text("+");
+        $(".timeBtn").removeClass("collapse.show").addClass("collapse");
+        $("#datePicker").val("");
+    });
+    $("#navTabStaff").click(function(){
+        $("button[data-bs-toggle='tab']:not(#navTabServices,#navTabStaff)").addClass("disabled");
+        $("#dateTimeContainer").empty();
+        $(".time,#agreeTermsConditions").prop("checked",false);
+        $(".timeBtn").removeClass("disabled");
+        $(".timeBtn").removeClass("collapse.show").addClass("collapse");
+        $("#datePicker").val("");
+    });
+    $("#navTabDateTime").click(function(){
+        $("#navTabContact").addClass("disabled");
+        $("#agreeTermsConditions").prop("checked",false);
     });
 
     // Services
@@ -35,101 +51,105 @@ $(document).ready(function(){
     }
     // Standard Haircut
     $("#standardCutBtn").click(function(){
+        const name = "Standard Haircut";
+        const price = 50;
         // Checks if service is in the list
-        if(serviceList.includes("standardHaircut") == true){ 
-            const target = "standardHaircut";
-            const index = serviceList.indexOf(target);
+        if(serviceList.includes(name) == true){ 
+            const index = serviceList.indexOf(name);
             serviceList.splice(index, 1);
             $("#standardCutList").remove();
-            total -= 50;
+            total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="standardCutBtn"]').text("+");
-            $('label[for="scissorCutBtn"],label[for="fadeCutBtn"],label[for="buzzCutBtn"]').removeClass("disabled");
+            $("label[for='standardCutBtn']").text("+");
+            $(".haircutBtn:not(label[for='standardCutBtn'])").removeClass("disabled");
         }
         else{
-            serviceList.push("standardHaircut");
-            $("#bookingList").append("<li class='d-flex justify-content-between' id='standardCutList'>Standard Haircut<span class='preferredStaff'></span><span>$50</span></li>");
-            total += 50;
+            serviceList.push(name);
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='standardCutList'>"+name+"<span>NZ$"+price+"</span></li>");
+            total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="standardCutBtn"]').text("-");
-            $("label[for='scissorCutBtn'],label[for='fadeCutBtn'],label[for='buzzCutBtn']").addClass("disabled");
+            $("label[for='standardCutBtn']").text("-");
+            $(".haircutBtn:not(label[for='standardCutBtn'])").addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
     });
     // Scisssor Cut
     $("#scissorCutBtn").click(function(){
-        if(serviceList.includes("scissorCut") == true){ 
-            const target = "scissorCut";
-            const index = serviceList.indexOf(target);
+        const name = "Scissor Cut";
+        const price = 80;
+        if(serviceList.includes(name) == true){ 
+            const index = serviceList.indexOf(name);
             serviceList.splice(index, 1);
             $("#scissorCutList").remove();
-            total -= 80;
+            total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="scissorCutBtn"]').text("+");
-            $('label[for="standardCutBtn"],label[for="fadeCutBtn"],label[for="buzzCutBtn"]').removeClass("disabled");
+            $("label[for='scissorCutBtn']").text("+");
+            $(".haircutBtn:not(label[for='scissorCutBtn'])").removeClass("disabled");
         }
         else{
-            serviceList.push("scissorCut");
-            $("#bookingList").append("<li id='scissorCutList'>Scissor Cut</li>");
-            total += 80;
+            serviceList.push(name);
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='scissorCutList'>"+name+"<span>NZ$"+price+"</li>");
+            total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="scissorCutBtn"]').text("-");
-            $('label[for="standardCutBtn"],label[for="fadeCutBtn"],label[for="buzzCutBtn"]').addClass("disabled");
+            $("label[for='scissorCutBtn']").text("-");
+            $(".haircutBtn:not(label[for='scissorCutBtn'])").addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
     });
     // Fade
     $("#fadeCutBtn").click(function(){
-        if(serviceList.includes("fadeCut") == true){ 
-            const target = "fadeCut";
-            const index = serviceList.indexOf(target);
+        const name = "Fade";
+        const price = 70;
+        if(serviceList.includes(name) == true){ 
+            const index = serviceList.indexOf(name);
             serviceList.splice(index, 1);
             $("#fadeCutList").remove();
-            total -= 70;
+            total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="fadeCutBtn"]').text("+");
-            $('label[for="scissorCutBtn"],label[for="standardCutBtn"],label[for="buzzCutBtn"]').removeClass("disabled");
+            $("label[for='fadeCutBtn']").text("+");
+            $(".haircutBtn:not(label[for='fadeCutBtn'])").removeClass("disabled");
         }
         else{
-            serviceList.push("fadeCut");
-            $("#bookingList").append("<li id='fadeCutList'>Fade</li>");
-            total += 70;
+            serviceList.push(name);
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='fadeCutList'>"+name+"<span>NZ$"+price+"</li>");
+            total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="fadeCutBtn"]').text("-");
-            $('label[for="scissorCutBtn"],label[for="standardCutBtn"],label[for="buzzCutBtn"]').addClass("disabled");
+            $("label[for='fadeCutBtn']").text("-");
+            $(".haircutBtn:not(label[for='fadeCutBtn'])").addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
     });
     // Buzz Cut
     $("#buzzCutBtn").click(function(){
-        if(serviceList.includes("buzzCut") == true){ 
-            const target = "buzzCut";
-            const index = serviceList.indexOf(target);
+        const name = "Buzz Cut";
+        const price = 40;
+        if(serviceList.includes(name) == true){ 
+            const index = serviceList.indexOf(name);
             serviceList.splice(index, 1);
             $("#buzzCutList").remove();
-            total -= 40;
+            total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="buzzCutBtn"]').text("+");
-            $('label[for="scissorCutBtn"],label[for="fadeCutBtn"],label[for="standardCutBtn"]').removeClass("disabled");
+            $("label[for='buzzCutBtn']").text("+");
+            $(".haircutBtn:not(label[for='buzzCutBtn'])").removeClass("disabled");
         }
         else{
-            serviceList.push("buzzCut");
-            $("#bookingList").append("<li id='buzzCutList'>Buzz Cut</li>");
-            total += 40;
+            serviceList.push(name);
+            $("#bookingList").append("<li class='d-flex justify-content-between' id='buzzCutList'>"+name+"<span>NZ$"+price+"</li>");
+            total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $('label[for="buzzCutBtn"]').text("-");
-            $('label[for="scissorCutBtn"],label[for="fadeCutBtn"],label[for="standardCutBtn"]').addClass("disabled");
+            $("label[for='buzzCutBtn']").text("-");
+            $(".haircutBtn:not(label[for='buzzCutBtn'])").addClass("disabled");
         }
         console.log(serviceList);
         console.log(total);
@@ -212,12 +232,12 @@ $(document).ready(function(){
         if($("#noStaffBtn").prop("checked")){
             $("#staffPlaceholder").text("Preference: "+$("#noStaffBtn").val());
             $("label[for='noStaffBtn']").text("-");
-            $(".staff:not(label[for='noStaffBtn'])").addClass("disabled");
+            $(".staffBtn:not(label[for='noStaffBtn'])").addClass("disabled");
         }
         else{
             $("#staffPlaceholder").text("No staff selected");
             $("label[for='noStaffBtn']").text("+");
-            $(".staff:not(label[for='noStaffBtn'])").removeClass("disabled");
+            $(".staffBtn:not(label[for='noStaffBtn'])").removeClass("disabled");
         }
     });
     // Marcie Stuward
@@ -225,12 +245,12 @@ $(document).ready(function(){
         if($("#marcieStaffBtn").prop("checked")){
             $("#staffPlaceholder").text("Preference: "+$("#marcieStaffBtn").val());
             $("label[for='marcieStaffBtn']").text("-");
-            $(".staff:not(label[for='marcieStaffBtn'])").addClass("disabled");
+            $(".staffBtn:not(label[for='marcieStaffBtn'])").addClass("disabled");
         }
         else{
             $("#staffPlaceholder").text("No staff selected");
             $("label[for='marcieStaffBtn']").text("+");
-            $(".staff:not(label[for='marcieStaffBtn'])").removeClass("disabled");
+            $(".staffBtn:not(label[for='marcieStaffBtn'])").removeClass("disabled");
         }
     });
     // Sadie Nguyen
@@ -238,18 +258,19 @@ $(document).ready(function(){
         if($("#sadieStaffBtn").prop("checked")){
             $("#staffPlaceholder").text("Preference: "+$("#sadieStaffBtn").val());
             $("label[for='sadieStaffBtn']").text("-");
-            $(".staff:not(label[for='sadieStaffBtn'])").addClass("disabled");
+            $(".staffBtn:not(label[for='sadieStaffBtn'])").addClass("disabled");
         }
         else{
             $("#staffPlaceholder").text("No staff selected");
             $("label[for='sadieStaffBtn']").text("+");
-            $(".staff:not(label[for='sadieStaffBtn'])").removeClass("disabled");
+            $(".staffBtn:not(label[for='sadieStaffBtn'])").removeClass("disabled");
         }
     });
 
-    // Date Picker 
+    // Date & Time
     datePicker.min = new Date().toLocaleDateString("fr-ca");
     var date = "";
+    // Date Picker
     $("#datePicker").on("change",function(){
         date = $('#datePicker').val();
         if(date === ""){
