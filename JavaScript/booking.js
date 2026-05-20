@@ -8,16 +8,19 @@ $(document).ready(function(){
             $("#navTabStaff").removeClass("disabled").click();
             $("#staffContainer").append("<p id='staffPlaceholder'>No staff selected</p>");
         }
-        else if($("#noStaffBtn").prop("checked")||$("#marcieStaffBtn").prop("checked")||$("#sadieStaffBtn").prop("checked")){
-            console.log("IT WORKS");
+        else if($("#navTabStaff").hasClass("active")&&($("#noStaffBtn").prop("checked")||$("#marcieStaffBtn").prop("checked")||$("#sadieStaffBtn").prop("checked"))){
             $("#navTabDateTime").removeClass("disabled").click();
+        }
+        else if($("#navTabDateTime").hasClass("active")&&$(".time:checked").length>0){
+            $("#navTabContact").removeClass("disabled").click();
+            $("#conta").text("Submit").prop('type', 'submit');
         }
     });
     $("#navTabServices").click(function(){
         $("#navTabStaff").addClass("disabled");
         $("#staffContainer").empty();
         $("#noStaffBtn,#marcieStaffBtn,#sadieStaffBtn").prop("checked",false);
-        $("label[for='noStaffBtn'],label[for='marcieStaffBtn'],label[for='sadieStaffBtn']").text("+").removeClass("disabled");
+        $(".staff").text("+").removeClass("disabled");
     });
 
     // Services
@@ -207,68 +210,114 @@ $(document).ready(function(){
     // No Prefference
     $("#noStaffBtn").click(function(){
         if($("#noStaffBtn").prop("checked")){
-            $("#staffPlaceholder").text("Preference: None");
+            $("#staffPlaceholder").text("Preference: "+$("#noStaffBtn").val());
             $("label[for='noStaffBtn']").text("-");
-            $("label[for='marcieStaffBtn'],label[for='sadieStaffBtn']").addClass("disabled");
+            $(".staff:not(label[for='noStaffBtn'])").addClass("disabled");
         }
         else{
             $("#staffPlaceholder").text("No staff selected");
             $("label[for='noStaffBtn']").text("+");
-            $("label[for='marcieStaffBtn'],label[for='sadieStaffBtn']").removeClass("disabled");
+            $(".staff:not(label[for='noStaffBtn'])").removeClass("disabled");
         }
     });
     // Marcie Stuward
     $("#marcieStaffBtn").click(function(){
         if($("#marcieStaffBtn").prop("checked")){
-            $("#staffPlaceholder").text("Preference: Marcie Stuward");
+            $("#staffPlaceholder").text("Preference: "+$("#marcieStaffBtn").val());
             $("label[for='marcieStaffBtn']").text("-");
-            $("label[for='noStaffBtn'],label[for='sadieStaffBtn']").addClass("disabled");
+            $(".staff:not(label[for='marcieStaffBtn'])").addClass("disabled");
         }
         else{
             $("#staffPlaceholder").text("No staff selected");
             $("label[for='marcieStaffBtn']").text("+");
-            $("label[for='noStaffBtn'],label[for='sadieStaffBtn']").removeClass("disabled");
+            $(".staff:not(label[for='marcieStaffBtn'])").removeClass("disabled");
         }
     });
     // Sadie Nguyen
     $("#sadieStaffBtn").click(function(){
         if($("#sadieStaffBtn").prop("checked")){
-            $("#staffPlaceholder").text("Preference: Sadie Nguyen");
+            $("#staffPlaceholder").text("Preference: "+$("#sadieStaffBtn").val());
             $("label[for='sadieStaffBtn']").text("-");
-            $("label[for='noStaffBtn'],label[for='marcieStaffBtn']").addClass("disabled");
+            $(".staff:not(label[for='sadieStaffBtn'])").addClass("disabled");
         }
         else{
             $("#staffPlaceholder").text("No staff selected");
             $("label[for='sadieStaffBtn']").text("+");
-            $("label[for='noStaffBtn'],label[for='marcieStaffBtn']").removeClass("disabled");
+            $(".staff:not(label[for='sadieStaffBtn'])").removeClass("disabled");
         }
     });
 
     // Date Picker 
     datePicker.min = new Date().toLocaleDateString("fr-ca");
-    
+    var date = "";
     $("#datePicker").on("change",function(){
-        if($('#datePicker').val() === ""){
+        date = $('#datePicker').val();
+        if(date === ""){
             console.log("No date selected");
-            $("label[for='nine'], label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").removeClass("collapse.show").addClass("collapse");
+            $(".time").prop("checked",false);
+            $(".timeBtn").removeClass("collapse.show").addClass("collapse").removeClass("disabled");
             $("#dateTimeContainer").empty();
+            return date;
         }
         else{
             console.log("Date selected");
-            $("label[for='nine'], label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").removeClass("collapse").addClass("collapse.show");
+            $(".timeBtn").removeClass("collapse").addClass("collapse.show");
+            return date;
         }
     });
-
+    // Nine
     $("#nine").click(function(){
         if($("#nine").prop("checked")){
-            $("#dateTimeContainer").append("<p>Date: "+$('#datePicker').val()+" | Time: 09:00</p>");
-            $("label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").addClass("disabled");
+            $("#dateTimeContainer").append("<p>Date: "+date+" | Time: "+$("#nine").val()+"</p>");
+            $(".timeBtn:not(label[for='nine'])").addClass("disabled");
         }
         else{
             $("#dateTimeContainer").empty();
-            $("label[for='ten'], label[for='eleven'], label[for='twelve'], label[for='thirteen']").removeClass("disabled");
+            $(".timeBtn:not(label[for='nine']").removeClass("disabled");
         }
-        
     });
-    
+    // Ten
+    $("#ten").click(function(){
+        if($("#ten").prop("checked")){
+            $("#dateTimeContainer").append("<p>Date: "+date+" | Time: "+$("#ten").val()+"</p>");
+            $(".timeBtn:not(label[for='ten'])").addClass("disabled");
+        }
+        else{
+            $("#dateTimeContainer").empty();
+            $(".timeBtn:not(label[for='ten']").removeClass("disabled");
+        }
+    });
+    // Eleven
+    $("#eleven").click(function(){
+        if($("#eleven").prop("checked")){
+            $("#dateTimeContainer").append("<p>Date: "+date+" | Time: "+$("#eleven").val()+"</p>");
+            $(".timeBtn:not(label[for='eleven'])").addClass("disabled");
+        }
+        else{
+            $("#dateTimeContainer").empty();
+            $(".timeBtn:not(label[for='eleven']").removeClass("disabled");
+        }
+    });
+    // Twelve
+    $("#twelve").click(function(){
+        if($("#twelve").prop("checked")){
+            $("#dateTimeContainer").append("<p>Date: "+date+" | Time: "+$("#twelve").val()+"</p>");
+            $(".timeBtn:not(label[for='twelve'])").addClass("disabled");
+        }
+        else{
+            $("#dateTimeContainer").empty();
+            $(".timeBtn:not(label[for='twelve']").removeClass("disabled");
+        }
+    });
+    // Thirteen
+    $("#thirteen").click(function(){
+        if($("#thirteen").prop("checked")){
+            $("#dateTimeContainer").append("<p>Date: "+date+" | Time: "+$("#thirteen").val()+"</p>");
+            $(".timeBtn:not(label[for='thirteen'])").addClass("disabled");
+        }
+        else{
+            $("#dateTimeContainer").empty();
+            $(".timeBtn:not(label[for='thirteen']").removeClass("disabled");
+        }
+    });
 });
