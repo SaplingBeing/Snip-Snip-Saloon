@@ -1,20 +1,72 @@
 /* Justin D. Grumal 240005134 */
-#formContainer{
-    background-color: #8c8c8c;
+/* Form Container */
+.formContainer, .summaryContainer{
+    color: var(--textColourWhite);
+    filter: drop-shadow(3px 5px 3px var(--shadowColour));
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
 }
+.formContainer, .summaryContainer{
+    background-color: var(--secondaryColour);
+    background-image: url(./Images/bg3.jpg);  
+}
+/* Navigation Buttons */
+i{
+    color: var(--secondaryColour);
+    font-size: 3rem;    
+}
+#backBtn, #exitBtn{
+    aspect-ratio: 1/1;
+}
+/* Tabs */
+.nav-link{
+    color: var(--textColourWhite) !important;
+}
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+.nav-link.active{
+    color: var(--textColour) !important;
+    font-weight: bold;
+}
+/* Accordion */
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none; /* Removes the bottom border shadow */
+} 
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125); /* Optional: keep the default border color */
+}
+/* Card */
 .cardBtn{
-    background-color: #8c8c8c;
+    color: var(--textColourWhite);
+    font-family: var(--fontFmText);
+    font-size: var(--fontXlg);
+
+    background-color: var(--accentColour);
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center;     /* Vertical centering */
 
-    font-family: 'josefin Sans';
-    font-size: 2rem;
-    color: #fff;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
+/* Continue Button */
+#continueBtn{
+    background-color: var(--accentColour);
+    color: var(--textColourWhite);
+    font-family: var(--fontFmText);
+    transition: transform 0.1s ease-out;
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in;
+}
+/* List */
 ul{
     list-style: none;
     padding: 0;
@@ -28,6 +80,10 @@ ul{
 }
 .timeBtn{
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 0.4rem;
     width: 100%;
+}
+.timeBtn:hover{
+    background-color: #28332a !important;
+    color: #fff !important  ;
 }

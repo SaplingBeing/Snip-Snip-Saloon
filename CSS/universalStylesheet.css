@@ -1,59 +1,97 @@
 /* Justin D. Grumal 240005134 */
-html, body{
-    overflow-x: hidden;
+/* Custom Variables */
+:root{
+    /* Colours */
+    --textColour: #1e1e1e;
+    --textColourInactive: #464646;
+    --textColourWhite: #f4f4f4;
+    --backgroundColour: #f3efe7;
+    --primaryColour: #702f3e;
+    --secondaryColour: #403531;
+    --accentColour: #28332a;
+    --shadowColour: #323232;
+    /* Font Size */
+    --fontBase: 1rem;
+    --fontLg: 2rem;
+    --fontXlg: 3rem;
+    /* Font Family */
+    --fontFmHeading: "Bodoni Moda";
+    --fontFmText: "Josefin Sans"
 }
-body{
-    background-color: #F3EFE7;
-    background-image: url(./Images/bg.jpg);
-    background-repeat: repeat;
-}
+/* Disables Scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
+body{
+    background-color: var(--backgroundColour);
+    background-image: url(./Images/bg.jpg);
+    background-repeat: repeat;
+}
+/* Center column */
+.center{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+}
+
+/* Font */
 p, .nav-link{
-    font-family: 'Josefin Sans';
-    font-size: 1rem;
+    font-family: var(--fontFmText);
+    font-size: var(--fontBase);
 }
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Bodoni Moda';
-}
-h1{
-    font-size: 2.5rem;
+    font-family: var(--fontFmHeading);
     font-weight: bold;
 }
-.white{
-    color: #f1f1f1;
+h1{
+    font-size: var(--fontLg);
 }
+.whiteText{
+    color: var(--textColourWhite);
+}
+
+/* Button */
+.btn {
+   border: none !important;
+}
+.btn:focus, .btn:active {
+   outline: none !important;
+   box-shadow: none !important;
+}
+
 /* Navigation bar */
-.navbar{
+/* Nav Container */
+.navbar{ 
     padding-top: 0px;
 }
+/* Nav Logo */
 .navbar-brand{
     margin: 0px;
-    padding-left: 20px;
-}
-#navLinks{
-    padding-top: 25px;
+    padding: 0px 0px 0px 20px;
 }
 .nav-link{
-    color: #464646;
+    color: var(--textColourInactive);
     text-align: center;
+    display: inline-block;
 }
 .nav-link:hover{
-    color: #1e1e1e;
+    color: var(--textColour);
     text-decoration: underline;
 }
 #bookNow{
-    color: #f1f1f1;
-    font-size: 1.1rem;
-    font-weight: 600;
-    background-color: #702F3E;
+    background-color: var(--primaryColour);
     background-image: url(./Images/bg2.jpg);
     background-repeat: none;
+    
+    color: var(--textColourWhite);
+    font-size: 1.1rem;
+    font-weight: 600;
+    
     filter: drop-shadow(0px 0px 20px #080808);
     border-radius: 0px 0px 20px 20px;
     padding: 35px 32.685px 18px 32.685px;
 }
+
 /* Offcanvas */
 .offcanvas{
     background-color: #F3EFE7;
@@ -68,6 +106,7 @@ h1{
     box-shadow: none !important;
     outline: none !important;
 }
+
 /* Footer */
 footer{
     background-color: #403531;

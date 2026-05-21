@@ -26,6 +26,7 @@ $(document).ready(function(){
         $(".staffBtn").text("+");
         $(".timeBtn").removeClass("collapse.show").addClass("collapse");
         $("#datePicker").val("");
+        $("#continueBtn").text("Continue").prop("type","button");
     });
     $("#navTabStaff").click(function(){
         $("button[data-bs-toggle='tab']:not(#navTabServices,#navTabStaff)").addClass("disabled");
@@ -34,10 +35,12 @@ $(document).ready(function(){
         $(".timeBtn").removeClass("disabled");
         $(".timeBtn").removeClass("collapse.show").addClass("collapse");
         $("#datePicker").val("");
+        $("#continueBtn").text("Continue").prop("type","button");
     });
     $("#navTabDateTime").click(function(){
         $("#navTabContact").addClass("disabled");
         $("#agreeTermsConditions").prop("checked",false);
+        $("#continueBtn").text("Continue").prop("type","button");
     });
 
     // Back Button
@@ -55,6 +58,10 @@ $(document).ready(function(){
             $("#navTabDateTime").click();
         }
     });
+    // Exit Button
+    $("#exitBtn").click(function(){
+        window.location.href = "./index.html";
+    })
 
     // Services
     // If no services is selected, a msg will display

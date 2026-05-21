@@ -23,317 +23,325 @@
     <script src="./JavaScript/formValidation.js"></script>
 </head>
 <body>
-    <div class="row">
-        <div class="col-12 d-flex justify-content-between">
-            <button class="btn" id="backBtn"><i class="bi bi-arrow-left-circle-fill"></i></button>
-            <a href="./index.html"><button class="btn"><i class="bi bi-x-circle-fill"></i></button></a>
-        </div>
+    <div class="container">
+        <form class="needs-validation" novalidate action="./services.html">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between">
+                    <button class="btn" id="backBtn"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <a href="./index.html" class="center"><img src="./CSS/Images/Logo.svg"></a>
+                    <button class="btn" id="exitBtn"><i class="bi bi-x-circle-fill"></i></button>
+               </div>
+            </div>
+            <div class="row gy-3">
+                <div class="col-lg-6">
+                    <div class="formContainer">
+                        <!-- Tabs -->
+                        <nav>   
+                            <div class="nav nav-tabs" id="navTabs">
+                                <button class="nav-link active" id="navTabServices" data-bs-toggle="tab" data-bs-target="#navServices">Services</button>
+                                <button class="nav-link disabled" id="navTabStaff" data-bs-toggle="tab" data-bs-target="#navStaff">Staff</button>
+                                <button class="nav-link disabled" id="navTabDateTime" data-bs-toggle="tab" data-bs-target="#navDateTime">Date & Time</button>
+                                <button class="nav-link disabled" id="navTabContact"  data-bs-toggle="tab" data-bs-target="#navContact">Contact</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content">
+                            <!-- Services -->
+                            <div class="tab-pane active" id="navServices">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 class="text-uppercase">Services</h1>
+                                        <p class="text-uppercase">Select a service(s) from below</p>
+                                        <hr>
+                                        <div class="accordion" id="services">
+                                            <!-- Haircuts -->
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#haircutCollapse">
+                                                        <h2 class="text-uppercase">Haircuts</h2>
+                                                    </button>
+                                                </div>
+                                                <div id="haircutCollapse" class="accordion-collapse collapse" data-bs-parent="services">
+                                                    <div class="accordion-body">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-uppercase">Standard Haircut</h5>
+                                                            <p class="card-text">$50 | 30 mins</p>
+                                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                            <input type="checkbox" class="btn-check haircut" id="standardCutBtn">
+                                                            <div class="d-flex justify-content-end">
+                                                                <label class="btn cardBtn haircutBtn" for="standardCutBtn">+</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-uppercase">Scissor Cut</h5>
+                                                            <p class="card-text">$80 | 60 mins</p>
+                                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                            <input type="checkbox" class="btn-check haircut" id="scissorCutBtn">
+                                                            <div class="d-flex justify-content-end">
+                                                                <label class="btn cardBtn haircutBtn" for="scissorCutBtn">+</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-uppercase">Fade</h5>
+                                                            <p class="card-text">$70 | 60 mins</p>
+                                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                            <input type="checkbox" class="btn-check haircut" id="fadeCutBtn">
+                                                            <div class="d-flex justify-content-end">
+                                                                <label class="btn cardBtn haircutBtn" for="fadeCutBtn">+</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title text-uppercase">Buzz cut</h5>
+                                                            <p class="card-text">$40 | 30 mins</p>
+                                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                            <input type="checkbox" class="btn-check haircut" id="buzzCutBtn">
+                                                            <div class="d-flex justify-content-end">
+                                                                <label class="btn cardBtn haircutBtn" for="buzzCutBtn">+</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Men's Beard -->
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beardCollapse">
+                                                        <h2 class="text-uppercase">Men's Beard</h2>
+                                                    </button>
+                                                </div>
+                                                <div id="beardCollapse" class="accordion-collapse collapse" data-bs-parent="services">
+                                                    <div class="accordion-body">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-uppercase">Beard Trim</h5>
+                                                                <p class="card-text">$30 | 30 mins</p>
+                                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                                <input type="checkbox" class="btn-check" id="trimBeardBtn">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <label class="btn cardBtn" for="trimBeardBtn">+</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-uppercase">Full Shave</h5>
+                                                                <p class="card-text">$50 | 60 mins</p>
+                                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                                <input type="checkbox" class="btn-check" id="fullBeardBtn">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <label class="btn cardBtn" for="fullBeardBtn">+</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Keratin Treatment -->
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#treatmentCollapse">
+                                                        <h2 class="text-uppercase">Keratin Treatment</h2>
+                                                    </button>
+                                                </div>
+                                                <div id="treatmentCollapse" class="accordion-collapse collapse" data-bs-parent="services">
+                                                    <div class="accordion-body">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-uppercase">Keratin Treatment</h5>
+                                                                <p class="card-text">$500 | 240 mins</p>
+                                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
+                                                                <input type="checkbox" class="btn-check" id="treatmentBtn">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <label class="btn cardBtn" for="treatmentBtn">+</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Staff -->
+                            <div class="tab-pane" id="navStaff">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 class="text-uppercase">Staff</h1>
+                                        <p class="text-uppercase">Select your preferred staff from below</p>
+                                        <hr>
+                                        <!-- No Preference -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5 class="card-title text-uppercase">No Preference</h5>
+                                                        <p class="card-text">Maximum Availability</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="checkbox" value="None" class="btn-check staff" id="noStaffBtn">
+                                                        <div class="d-flex justify-content-end h-100 align-items-center"> 
+                                                            <label class="btn cardBtn staffBtn" for="noStaffBtn">+</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Marcie Stuward -->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <img src="./CSS/Images/marcieHairdresser.png" class="img-fluid rounded-circle profileCard">
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h5 class="card-title text-uppercase">Marcie Stuward</h5>
+                                                        <p class="card-text">Senior hairdresser</p>
+                                                        <input type="checkbox" value="Marcie Stuward" class="btn-check staff" id="marcieStaffBtn">
+                                                        <div class="d-flex justify-content-end">
+                                                            <label class="btn cardBtn staffBtn" for="marcieStaffBtn">+</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Sadie Nguyen-->
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <img src="./CSS/Images/sadieHairdresser.png" class="img-fluid rounded-circle profileCard">
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h5 class="card-title text-uppercase">Sadie Nguyen</h5>
+                                                        <p class="card-text">Junior hairdresser</p>
+                                                        <input type="checkbox" value="Sadie Nguyen" class="btn-check staff" id="sadieStaffBtn">
+                                                        <div class="d-flex justify-content-end">
+                                                            <label class="btn cardBtn staffBtn" for="sadieStaffBtn">+</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Date & Time -->
+                            <div class="tab-pane" id="navDateTime">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 class="text-uppercase">Date & Time</h1>
+                                        <p class="text-uppercase">Select a date & time for your appointment</p>
+                                        <hr>
+                                        <!-- Date -->
+                                        <label for="datePicker" class="form-label text-uppercase">Select a Date</label>
+                                        <input type="date" onkeydown="return false;" class="form-control" id="datePicker" required>
+                                        <!-- Time -->
+                                        <input type="checkbox" value="9:00" class="btn-check time" id="nine">
+                                        <label class="btn timeBtn collapse" for="nine">09:00</label>
+                                        <br>
+                                        <input type="checkbox" value="10:00" class="btn-check time" id="ten">
+                                        <label class="btn timeBtn collapse" for="ten">10:00</label>
+                                        <br>
+                                        <input type="checkbox" value="11:00" class="btn-check time" id="eleven">
+                                        <label class="btn timeBtn collapse" for="eleven">11:00</label>
+                                        <br>
+                                        <input type="checkbox" value="12:00" class="btn-check time" id="twelve">
+                                        <label class="btn timeBtn collapse" for="twelve">12:00</label>
+                                        <br>
+                                        <input type="checkbox" value="13:00" class="btn-check time" id="thirteen">
+                                        <label class="btn timeBtn collapse" for="thirteen">13:00</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- First Name & Last Name -->
+                            <div class="tab-pane" id="navContact">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 class="text-uppercase">Contact details</h1>
+                                        <p class="text-uppercase">Please fill up your contact details below</p>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="row">
+                                    <!-- First Name -->
+                                    <div class="col-6">
+                                        <label for="inputFirstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="inputFirstName" minlength="2" maxlength="30" pattern="[A-Za-z]*" required>
+                                        <div class="invalid-feedback">Must be at least 2 characters long. Only letters allowed.</div>
+                                    </div>
+                                    <!-- Last Name -->
+                                    <div class="col-6">
+                                        <label for="inputLastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="inputLastName" minlength="2" maxlength="30" pattern="[A-Za-z]*" required>
+                                        <div class="invalid-feedback">Must be at least 2 characters long. Only letters allowed.</div>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="inputEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Ex. example@email.com" required>
+                                    </div>
+                                </div>
+                                <!-- Mobile Number -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="inputMobile" class="form-label">Mobile Number</label>
+                                        <input type="tel" class="form-control" id="inputMobile" maxlength="9" pattern="[0-9]{2}[0-9]{3}[0-9]{4}" placeholder="Ex. 434239541" required>
+                                    </div>
+                                </div>
+                                <!-- Comment -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="comment">Comment</label>
+                                        <textarea class="form-control" id="comment" placeholder="Leave a comment here..."></textarea>
+                                    </div>
+                                </div>
+                                <!-- Terms & Conditions -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input class="form-check-input" id="agreeTermsConditions" type="checkbox" value="agree" required>
+                                        <label class="form-check-label" for="agreeTermsConditions">Agree to terms & conditions</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Booking Summary -->
+                <div class="col-lg-6">
+                    <div class="summaryContainer sticky-top">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="text-uppercase">Booking Summary</h1>
+                                <hr>
+                                <h5 class="text-uppercase">Address</h5>
+                                <p>423 Queen Street, Auckland, New Zealand</p>
+                                <div id="dateTimeContainer"></div>
+                                <h5 class="d-flex justify-content-between text-uppercase">Service Name<span>Price</span></h5>
+                                <p id="bookingPlaceHolder">No services selected</p>
+                                <ul id="bookingList"></ul>
+                                <div id="staffContainer"></div>
+                                <hr>
+                                <h2 class="d-flex justify-content-between text-uppercase">Total:<span id="totalPrice"></span></h2>
+                                <button type="button" class="btn text-uppercase" id="continueBtn">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <form class="needs-validation" novalidate action="./services.html">
-        <div class="row">
-            <div class="col-md-6" id="formContainer">
-                <!-- Tabs -->
-                <nav>   
-                    <div class="nav nav-tabs" id="navTabs">
-                        <button class="nav-link active" id="navTabServices" data-bs-toggle="tab" data-bs-target="#navServices">Services</button>
-                        <button class="nav-link disabled" id="navTabStaff" data-bs-toggle="tab" data-bs-target="#navStaff">Staff</button>
-                        <button class="nav-link disabled" id="navTabDateTime" data-bs-toggle="tab" data-bs-target="#navDateTime">Date & Time</button>
-                        <button class="nav-link disabled" id="navTabContact"  data-bs-toggle="tab" data-bs-target="#navContact">Contact</button>
-                    </div>
-                </nav>
-                <div class="tab-content">
-                    <!-- Services -->
-                    <div class="tab-pane active" id="navServices">
-                        <div class="row">
-                            <div class="col-12">
-                                <h1 class="text-uppercase">Services</h1>
-                                <p class="text-uppercase">Select a service(s) from below</p>
-                                <hr>
-                                <div class="accordion" id="services">
-                                    <!-- Haircuts -->
-                                    <div class="accordion-item">
-                                        <div class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#haircutCollapse">
-                                                <h2 class="text-uppercase">Haircuts</h2>
-                                            </button>
-                                        </div>
-                                        <div id="haircutCollapse" class="accordion-collapse collapse" data-bs-parent="services">
-                                            <div class="accordion-body">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-uppercase">Standard Haircut</h5>
-                                                    <p class="card-text">$50 | 30 mins</p>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
-                                                    <input type="checkbox" class="btn-check haircut" id="standardCutBtn">
-                                                    <div class="d-flex justify-content-end">
-                                                        <label class="btn cardBtn haircutBtn" for="standardCutBtn">+</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-uppercase">Scissor Cut</h5>
-                                                    <p class="card-text">$80 | 60 mins</p>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
-                                                    <input type="checkbox" class="btn-check haircut" id="scissorCutBtn">
-                                                    <div class="d-flex justify-content-end">
-                                                        <label class="btn cardBtn haircutBtn" for="scissorCutBtn">+</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-uppercase">Fade</h5>
-                                                    <p class="card-text">$70 | 60 mins</p>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
-                                                    <input type="checkbox" class="btn-check haircut" id="fadeCutBtn">
-                                                    <div class="d-flex justify-content-end">
-                                                        <label class="btn cardBtn haircutBtn" for="fadeCutBtn">+</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-uppercase">Buzz cut</h5>
-                                                    <p class="card-text">$40 | 30 mins</p>
-                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
-                                                    <input type="checkbox" class="btn-check haircut" id="buzzCutBtn">
-                                                    <div class="d-flex justify-content-end">
-                                                        <label class="btn cardBtn haircutBtn" for="buzzCutBtn">+</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Men's Beard -->
-                                    <div class="accordion-item">
-                                        <div class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beardCollapse">
-                                                <h2 class="text-uppercase">Men's Beard</h2>
-                                            </button>
-                                        </div>
-                                        <div id="beardCollapse" class="accordion-collapse collapse" data-bs-parent="services">
-                                            <div class="accordion-body">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title text-uppercase">Beard Trim</h5>
-                                                        <p class="card-text">$30 | 30 mins</p>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
-                                                        <input type="checkbox" class="btn-check" id="trimBeardBtn">
-                                                        <div class="d-flex justify-content-end">
-                                                            <label class="btn cardBtn" for="trimBeardBtn">+</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title text-uppercase">Full Shave</h5>
-                                                        <p class="card-text">$50 | 60 mins</p>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
-                                                        <input type="checkbox" class="btn-check" id="fullBeardBtn">
-                                                        <div class="d-flex justify-content-end">
-                                                            <label class="btn cardBtn" for="fullBeardBtn">+</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Keratin Treatment -->
-                                    <div class="accordion-item">
-                                        <div class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#treatmentCollapse">
-                                                <h2 class="text-uppercase">Keratin Treatment</h2>
-                                            </button>
-                                        </div>
-                                        <div id="treatmentCollapse" class="accordion-collapse collapse" data-bs-parent="services">
-                                            <div class="accordion-body">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title text-uppercase">Keratin Treatment</h5>
-                                                        <p class="card-text">$500 | 240 mins</p>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
-                                                        <input type="checkbox" class="btn-check" id="treatmentBtn">
-                                                        <div class="d-flex justify-content-end">
-                                                            <label class="btn cardBtn" for="treatmentBtn">+</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Staff -->
-                    <div class="tab-pane" id="navStaff">
-                        <div class="row">
-                            <div class="col-12">
-                                <h1 class="text-uppercase">Staff</h1>
-                                <p class="text-uppercase">Select your preferred staff from below</p>
-                                <hr>
-                                <!-- No Preference -->
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h5 class="card-title text-uppercase">No Preference</h5>
-                                                <p class="card-text">Maximum Availability</p>
-                                            </div>
-                                            <div class="col-6">
-                                                <input type="checkbox" value="None" class="btn-check staff" id="noStaffBtn">
-                                                <div class="d-flex justify-content-end h-100 align-items-center"> 
-                                                    <label class="btn cardBtn staffBtn" for="noStaffBtn">+</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Marcie Stuward -->
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <img src="./CSS/Images/marcieHairdresser.png" class="img-fluid rounded-circle profileCard">
-                                            </div>
-                                            <div class="col-10">
-                                                <h5 class="card-title text-uppercase">Marcie Stuward</h5>
-                                                <p class="card-text">Senior hairdresser</p>
-                                                <input type="checkbox" value="Marcie Stuward" class="btn-check staff" id="marcieStaffBtn">
-                                                <div class="d-flex justify-content-end">
-                                                    <label class="btn cardBtn staffBtn" for="marcieStaffBtn">+</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Sadie Nguyen-->
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <img src="./CSS/Images/sadieHairdresser.png" class="img-fluid rounded-circle profileCard">
-                                            </div>
-                                            <div class="col-10">
-                                                <h5 class="card-title text-uppercase">Sadie Nguyen</h5>
-                                                <p class="card-text">Junior hairdresser</p>
-                                                <input type="checkbox" value="Sadie Nguyen" class="btn-check staff" id="sadieStaffBtn">
-                                                <div class="d-flex justify-content-end">
-                                                    <label class="btn cardBtn staffBtn" for="sadieStaffBtn">+</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Date & Time -->
-                    <div class="tab-pane" id="navDateTime">
-                        <div class="row">
-                            <div class="col-12">
-                                <h1 class="text-uppercase">Date & Time</h1>
-                                <p class="text-uppercase">Select a date & time for your appointment</p>
-                                <hr>
-                                <!-- Date -->
-                                <label for="datePicker" class="form-label text-uppercase">Select a Date</label>
-                                <input type="date" onkeydown="return false;" class="form-control" id="datePicker" required>
-                                <!-- Time -->
-                                <input type="checkbox" value="9:00" class="btn-check time" id="nine">
-                                <label class="btn timeBtn collapse" for="nine">09:00</label>
-                                <br>
-                                <input type="checkbox" value="10:00" class="btn-check time" id="ten">
-                                <label class="btn timeBtn collapse" for="ten">10:00</label>
-                                <br>
-                                <input type="checkbox" value="11:00" class="btn-check time" id="eleven">
-                                <label class="btn timeBtn collapse" for="eleven">11:00</label>
-                                <br>
-                                <input type="checkbox" value="12:00" class="btn-check time" id="twelve">
-                                <label class="btn timeBtn collapse" for="twelve">12:00</label>
-                                <br>
-                                <input type="checkbox" value="13:00" class="btn-check time" id="thirteen">
-                                <label class="btn timeBtn collapse" for="thirteen">13:00</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- First Name & Last Name -->
-                    <div class="tab-pane" id="navContact">
-                        <div class="row">
-                            <div class="col-12">
-                                <h1 class="text-uppercase">Contact details</h1>
-                                <p class="text-uppercase">Please fill up your contact details below</p>
-                                <hr>
-                            </div>
-                            <!-- Name -->
-                            <div class="row">
-                                <!-- First Name -->
-                                <div class="col-6">
-                                    <label for="inputFirstName" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="inputFirstName" minlength="2" maxlength="30" pattern="[A-Za-z]*" required>
-                                    <div class="invalid-feedback">Must be at least 2 characters long. Only letters allowed.</div>
-                                </div>
-                                <!-- Last Name -->
-                                <div class="col-6">
-                                    <label for="inputLastName" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="inputLastName" minlength="2" maxlength="30" pattern="[A-Za-z]*" required>
-                                    <div class="invalid-feedback">Must be at least 2 characters long. Only letters allowed.</div>
-                                </div>
-                            </div>
-                            <!-- Email -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <label for="inputEmail" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Ex. example@email.com" required>
-                                </div>
-                            </div>
-                            <!-- Mobile Number -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <label for="inputMobile" class="form-label">Mobile Number</label>
-                                    <input type="tel" class="form-control" id="inputMobile" maxlength="9" pattern="[0-9]{2}[0-9]{3}[0-9]{4}" placeholder="Ex. 434239541" required>
-                                </div>
-                            </div>
-                            <!-- Comment -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <label for="comment">Comment</label>
-                                    <textarea class="form-control" id="comment" placeholder="Leave a comment here..."></textarea>
-                                </div>
-                            </div>
-                            <!-- Terms & Conditions -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <input class="form-check-input" id="agreeTermsConditions" type="checkbox" value="agree" required>
-                                    <label class="form-check-label" for="agreeTermsConditions">Agree to terms & conditions</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Booking Summary -->
-            <div class="col-md-6" id="formContainer">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-uppercase">Booking Summary</h1>
-                        <hr>
-                        <h5 class="text-uppercase">Address</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, neque?</p>
-                        <div id="dateTimeContainer"></div>
-                        <h5 class="d-flex justify-content-between text-uppercase">Service Name<span>Price</span></h5>
-                        <p id="bookingPlaceHolder">No services selected</p>
-                        <ul id="bookingList"></ul>
-                        <div id="staffContainer"></div>
-                        <hr>
-                        <h2 class="d-flex justify-content-between text-uppercase">Total:<span id="totalPrice"></span></h2>
-                        <button type="button" class="btn btn-primary text-uppercase" id="continueBtn">Continue</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
 </body>
 </html>
