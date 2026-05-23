@@ -13,8 +13,11 @@
 }
 /* Navigation Buttons */
 i{
-    color: var(--secondaryColour);
+    color: var(--textColourInactive);
     font-size: 3rem;    
+}
+i:hover{
+    color: var(--textColour);
 }
 #backBtn, #exitBtn{
     aspect-ratio: 1/1;
@@ -34,13 +37,16 @@ i{
 .accordion-button:not(.collapsed) {
     color: inherit;
     background-color: transparent;
-    box-shadow: none; /* Removes the bottom border shadow */
+    box-shadow: none;
 } 
 .accordion-button:focus {
     box-shadow: none;
     border-color: rgba(0,0,0,.125); /* Optional: keep the default border color */
 }
 /* Card */
+.card{
+    color: var(--textColour);
+}
 .cardBtn{
     color: var(--textColourWhite);
     font-family: var(--fontFmText);
@@ -55,35 +61,49 @@ i{
     justify-content: center; 
     align-items: center;
 }
+/* Button */
+.btn-check:checked+.btn{
+    background-color: var(--accentColour);
+    font-weight: bold;
+}
 /* Continue Button */
 #continueBtn{
-    background-color: var(--accentColour);
     color: var(--textColourWhite);
     font-family: var(--fontFmText);
-    transition: transform 0.1s ease-out;
+    background-color: var(--primaryColour);
 }
-.btn:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in;
+#continueBtn:hover{
+    font-weight: bold;
 }
-/* List */
-ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'josefin Sans';
-    font-size: 1rem;
+#timePlaceHolder{
+    margin: 0px 0px 8px 0px;
 }
-.profileCard{
-    width: 100%;
-    height: auto;
-}
+/* Time Button */
 .timeBtn{
-    background-color: #ffffff;
-    border-radius: 0.4rem;
+    background-color: var(--textColourWhite);
     width: 100%;
 }
 .timeBtn:hover{
-    background-color: #28332a !important;
-    color: #fff !important  ;
+    background-color: var(--accentColour) !important;
+    color: var(--textColourWhite) !important;
+    font-weight: bold;
 }
+/* List */
+ul{
+    font-family: var(--fontFmText);
+    font-size: var(--fontbase);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* Profile Image */
+.profileImgCard{
+    width: 100%;
+    height: auto;
+}
+/* Labels */
+label{
+    font-family: var(--fontFmText);
+    font-size: var(--fontbase);
+}
+

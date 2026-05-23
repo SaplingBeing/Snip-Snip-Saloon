@@ -24,7 +24,7 @@ $(document).ready(function(){
         $(".staff,.time,#agreeTermsConditions").prop("checked",false);
         $(".staffBtn,.timeBtn").removeClass("disabled");
         $(".staffBtn").text("+");
-        $(".timeBtn").removeClass("collapse.show").addClass("collapse");
+        $(".timeBtn, #timePlaceHolder").removeClass("collapse.show").addClass("collapse");
         $("#datePicker").val("");
         $("#continueBtn").text("Continue").prop("type","button");
     });
@@ -33,7 +33,7 @@ $(document).ready(function(){
         $("#dateTimeContainer").empty();
         $(".time,#agreeTermsConditions").prop("checked",false);
         $(".timeBtn").removeClass("disabled");
-        $(".timeBtn").removeClass("collapse.show").addClass("collapse");
+        $(".timeBtn, #timePlaceHolder").removeClass("collapse.show").addClass("collapse");
         $("#datePicker").val("");
         $("#continueBtn").text("Continue").prop("type","button");
     });
@@ -305,13 +305,13 @@ $(document).ready(function(){
         if(date === ""){
             console.log("No date selected");
             $(".time").prop("checked",false);
-            $(".timeBtn").removeClass("collapse.show").addClass("collapse").removeClass("disabled");
+            $(".timeBtn, #timePlaceHolder").removeClass("collapse.show").addClass("collapse").removeClass("disabled");
             $("#dateTimeContainer").empty();
             return date;
         }
         else{
             console.log("Date selected");
-            $(".timeBtn").removeClass("collapse").addClass("collapse.show");
+            $(".timeBtn, #timePlaceHolder").removeClass("collapse").addClass("collapse.show");
             return date;
         }
     });

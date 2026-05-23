@@ -24,7 +24,9 @@
 </head>
 <body>
     <div class="container">
+        <!-- NOTE: CHANGE REDIRECTED PAGE -->
         <form class="needs-validation" novalidate action="./services.html">
+            <!-- Navigation Buttons -->
             <div class="row">
                 <div class="col-12 d-flex justify-content-between">
                     <button class="btn" id="backBtn"><i class="bi bi-arrow-left-circle-fill"></i></button>
@@ -49,6 +51,7 @@
                             <div class="tab-pane active" id="navServices">
                                 <div class="row">
                                     <div class="col-12">
+                                        <br>
                                         <h1 class="text-uppercase">Services</h1>
                                         <p class="text-uppercase">Select a service(s) from below</p>
                                         <hr>
@@ -167,7 +170,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
                                     </div>
                                 </div>
                             </div>
@@ -175,6 +177,7 @@
                             <div class="tab-pane" id="navStaff">
                                 <div class="row">
                                     <div class="col-12">
+                                        <br>
                                         <h1 class="text-uppercase">Staff</h1>
                                         <p class="text-uppercase">Select your preferred staff from below</p>
                                         <hr>
@@ -231,7 +234,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
                                     </div>
                                 </div>
                             </div>
@@ -239,13 +241,16 @@
                             <div class="tab-pane" id="navDateTime">
                                 <div class="row">
                                     <div class="col-12">
+                                        <br>
                                         <h1 class="text-uppercase">Date & Time</h1>
                                         <p class="text-uppercase">Select a date & time for your appointment</p>
                                         <hr>
                                         <!-- Date -->
-                                        <label for="datePicker" class="form-label text-uppercase">Select a Date</label>
+                                        <label for="datePicker" class="form-label text-uppercase">Select a date</label>
                                         <input type="date" onkeydown="return false;" class="form-control" id="datePicker" required>
                                         <!-- Time -->
+                                        <br>
+                                        <p class="text-uppercase collapse" id="timePlaceHolder">Select a time</p>
                                         <input type="checkbox" value="9:00" class="btn-check time" id="nine">
                                         <label class="btn timeBtn collapse" for="nine">09:00</label>
                                         <br>
@@ -267,6 +272,7 @@
                             <div class="tab-pane" id="navContact">
                                 <div class="row">
                                     <div class="col-12">
+                                        <br>
                                         <h1 class="text-uppercase">Contact details</h1>
                                         <p class="text-uppercase">Please fill up your contact details below</p>
                                         <hr>
@@ -304,10 +310,11 @@
                                 <!-- Comment -->
                                 <div class="row">
                                     <div class="col-12">
-                                        <label for="comment">Comment</label>
+                                        <label for="comment" class="form-label">Comment</label>
                                         <textarea class="form-control" id="comment" placeholder="Leave a comment here..."></textarea>
                                     </div>
                                 </div>
+                                <br>
                                 <!-- Terms & Conditions -->
                                 <div class="row">
                                     <div class="col-12">
@@ -328,6 +335,7 @@
                                 <hr>
                                 <h5 class="text-uppercase">Address</h5>
                                 <p>423 Queen Street, Auckland, New Zealand</p>
+                                <hr>
                                 <div id="dateTimeContainer"></div>
                                 <h5 class="d-flex justify-content-between text-uppercase">Service Name<span>Price</span></h5>
                                 <p id="bookingPlaceHolder">No services selected</p>

@@ -1,34 +1,47 @@
 /* Justin D. Grumal 240005134 */
+/* Navigation Bar */
+#home{
+    color: var(--textColour);
+    font-weight: bold;
+    text-decoration: underline;
+} 
+/* Body Background */
 body{
     background-image: url(./Images/bannerIndex_L.jpg), url(./Images/bg.jpg);
     background-repeat: no-repeat, repeat;
     background-size: 100vw 90vh;
 }
-#home{
-    color: #1e1e1e;
-    font-weight: 600;
-    text-decoration: underline;
-} 
+@media (max-width: 600px) {
+    body{
+        background-image: url(./Images/bannerIndex_SM.jpg);
+        background-repeat: no-repeat;
+        background-size: 100vw 90vh;
+    }
+}
+/* Banner Container */
 #banner{
     display: flex;
     height: 70vh; 
     align-items: center; 
     justify-content: center; 
 }
+/* Bar Code */
 #barcodeContainer{
-    background-color: #28332A;
+    background-color: var(--accentColour);
     width: 400px;
     height: 100px;
     text-align: center;
     padding-top: 10px;
 }
 #barcode{
+    color: var(--textColourWhite);
     font-family: "Libre Barcode 128";
     font-size: 100px;
-    color: #F3EFE7;
+    font-weight: normal;
 }
+/* Service Row */
 .rowBg{
-    background-color: #E8E0D1;
+    background-color: var(--backgroundVariant1Colour);
     background-image: url(./Images/bg4.jpg);
     background-repeat: repeat;
 }
@@ -38,11 +51,5 @@ body{
     aspect-ratio: 1/1;
     filter: drop-shadow(0px 0px 20px #080808);
 }
-@media (max-width: 600px) {
-    body{
-        background-image: url(./Images/bannerIndex_SM.jpg);
-        background-repeat: no-repeat;
-        background-size: 100vw 90vh;
-    }
-}
+
 

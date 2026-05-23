@@ -1,18 +1,20 @@
 /* Justin D. Grumal 240005134 */
-/* Custom Variables */
+/* Custom Variables */  
 :root{
     /* Colours */
     --textColour: #1e1e1e;
-    --textColourInactive: #464646;
+    --textColourInactive: #484848;
     --textColourWhite: #f4f4f4;
     --backgroundColour: #f3efe7;
+    --backgroundVariant1Colour: #E8E0D1;
     --primaryColour: #702f3e;
     --secondaryColour: #403531;
     --accentColour: #28332a;
     --shadowColour: #323232;
     /* Font Size */
     --fontBase: 1rem;
-    --fontLg: 2rem;
+    --fontMd: clamp(40px, 5vw, 10rem);
+    --fontLg: clamp(33px, 5vw, 10rem);
     --fontXlg: 3rem;
     /* Font Family */
     --fontFmHeading: "Bodoni Moda";
@@ -21,6 +23,15 @@
 /* Disables Scrollbar */
 ::-webkit-scrollbar {
     display: none;
+}
+html, body {
+    overflow-x: clip;
+    max-width: 100%;
+}
+@media (max-width: 600px) {
+    body{
+        padding: 0px;
+    }
 }
 body{
     background-color: var(--backgroundColour);
@@ -33,7 +44,11 @@ body{
     justify-content: center; /* Horizontal centering */
     align-items: center;     /* Vertical centering */
 }
-
+hr{
+    border: none;
+    border-top: 1px solid #fff;
+    opacity: 1;
+}
 /* Font */
 p, .nav-link{
     font-family: var(--fontFmText);
@@ -46,18 +61,27 @@ h1, h2, h3, h4, h5, h6{
 h1{
     font-size: var(--fontLg);
 }
+h2{
+    font-size: var(--fontMd);
+}
 .whiteText{
     color: var(--textColourWhite);
 }
 
 /* Button */
 .btn {
-   border: none !important;
+    border: none !important;
+    border-radius: 0.375rem;
+    transition: transform 0.1s ease-out;
 }
 .btn:focus, .btn:active {
-   outline: none !important;
-   box-shadow: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
+.btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in;
+}   
 
 /* Navigation bar */
 /* Nav Container */
@@ -78,7 +102,7 @@ h1{
     color: var(--textColour);
     text-decoration: underline;
 }
-#bookNow{
+/* #bookNow{
     background-color: var(--primaryColour);
     background-image: url(./Images/bg2.jpg);
     background-repeat: none;
@@ -87,14 +111,14 @@ h1{
     font-size: 1.1rem;
     font-weight: 600;
     
-    filter: drop-shadow(0px 0px 20px #080808);
+    filter: drop-shadow(0px 0px 20px var(--shadowColour));
     border-radius: 0px 0px 20px 20px;
     padding: 35px 32.685px 18px 32.685px;
-}
+} */
 
 /* Offcanvas */
 .offcanvas{
-    background-color: #F3EFE7;
+    background-color: var(--backgroundColour);
     background-image: url(./Images/bg.jpg);
     background-repeat: repeat;
 }
@@ -109,7 +133,7 @@ h1{
 
 /* Footer */
 footer{
-    background-color: #403531;
+    background-color: var(--secondaryColour);
     background-image: url(./Images/bg3.jpg);
     background-size: cover;
     position: absolute;
@@ -129,6 +153,7 @@ footer{
     list-style: none;
     padding-right: 20px;
 }
+
 /* Animation */
 .fadeExit{
     animation: fadeExit;
@@ -138,13 +163,4 @@ footer{
 @keyframes fadeExit{
     from {scale: 1; opacity: 1;}
     to {scale: 0.8; opacity: 0;}
-}
-.offcanvas-top {
-    height: 40vh !important;
-}
-/* Media Query */
-@media (max-width: 600px) {
-    body{
-        padding: 0px;
-    }
 }
