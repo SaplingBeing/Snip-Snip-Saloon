@@ -4,19 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNIP SNIP - SERVICES</title>
+    <title>Snip Snip - Services</title>
     <!-- Bootstrap  CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Barcode+128&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./CSS/universalStylesheet.css">
     <link rel="stylesheet" href="./CSS/services.css">
-    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
     <!-- JavaScript -->
     <script src="/JavaScript/setNav.js"></script>
+    <script src="./JavaScript/hideNav.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top" id="navigationBar"></nav>
+    <nav class="navbar navbar-expand-lg sticky-top autohide" id="navigationBar"></nav>
+    <!-- Content -->
+    <div class="container-fluid">
+        <!-- Banner -->
+        <div class="row">
+            <div class="col-12 center" id="banner">
+                <h1 class="text-uppercase thicker stretch" id="bannerText">Services</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="text-uppercase">If you have any questions regarding our services, please contact booking@snipsnip.com for assitance. We are happy to accomodate.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 stick">
+                <div id="list-example"  class="list-group sticky-top" style="top: 2rem; z-index: -0;">
+                <a class="list-group-item list-group-item-action" href="#list-item-1">Haircuts</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">Men's Beard</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">Colour</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">Treatment</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-5">Styling</a>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                <!-- Haircut -->
+                <div class="row" id="list-item-1">
+                    <div class="col-12">
+                        <h2 class="text-uppercase">Haircuts</h2>
+                        <p>From classic to contemporary, our expert stylists provide precision haircuts tailored to your individual style. All of our haircut services are gender free and includes consultation. Prices are subject to change based on hair length.</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Price (NZ$)</th>
+                                <th scope="col">Duration (Min)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Fringe Trim</td>
+                                    <td>30</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Buzz Cut</td>
+                                    <td>40</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Standard Haircut</td>
+                                    <td>50</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Fade</td>
+                                    <td>70</td>
+                                    <td>60</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Scissor Cut</td>
+                                    <td>80</td>
+                                    <td>60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>         
+                </div>
+                <!-- Men's Beard -->
+                <div class="row" id="list-item-2">
+                    <div class="col-12">
+                        <h2 class="text-uppercase">Men's Beard</h2>
+                        <p>Define your facial features with our professional beard trims and close shaves, leaving you looking polished and refined.</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Price (NZ$)</th>
+                                <th scope="col">Duration (Min)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Beard Trim</td>
+                                    <td>30</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Full Shave</td>
+                                    <td>50</td>
+                                    <td>60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Colour -->
+                <div class="row" id="list-item-3">
+                    <div class="col-12">
+                        <h2 class="text-uppercase">Colour</h2>
+                        <p>Unleash your inner vibrant self with our extensive colour services. Whether you desire subtle highlights with foils, sun-kissed balayage, dramatic global colour, or a bold transformation with bleach, our colour specialists use premium products for stunning, long-lasting results.</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Price (NZ$)</th>
+                                <th scope="col">Duration (Min)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Toner</td>
+                                    <td>100</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Global</td>
+                                    <td>200</td>
+                                    <td>60</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Bleach</td>
+                                    <td>250</td>
+                                    <td>120</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Foils</td>
+                                    <td>300</td>
+                                    <td>180</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Balayage</td>
+                                    <td>400</td>
+                                    <td>240</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Treatment -->
+                <div class="row" id="list-item-4">
+                    <div class="col-12">
+                        <h2 class="text-uppercase">Treatment</h2>
+                        <p>Indulge in our specialized hair treatments, including long-lasting perms for added volume and texture, and revitalising keratin treatments to smooth and strengthen your locks.</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Price (NZ$)</th>
+                                <th scope="col">Duration (Min)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Cold Perm</td>
+                                    <td>250</td>
+                                    <td>180</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Digital Perm</td>
+                                    <td>300</td>
+                                    <td>240</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Keratin Treatment</td>
+                                    <td>500</td>
+                                    <td>240</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Styling -->
+                <div class="row" id="list-item-5">
+                    <div class="col-12">
+                        <h2 class="text-uppercase">Styling</h2>
+                        <p>Complete your look with our professional styling services, perfect for any occasion, from everyday elegance to glamorous events.</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Price (NZ$)</th>
+                                <th scope="col">Duration (Min)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Blow Dry (Incl. Shampoo)</td>
+                                    <td>50</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -4,20 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNIP SNIP - ABOUT US</title>
+    <title>Snip Snip - About Us</title>
     <!-- Bootstrap  CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Barcode+128&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./CSS/universalStylesheet.css">
     <link rel="stylesheet" href="./CSS/aboutUsStylesheet.css">
-    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
     <!-- JavaScript -->
     <script src="/JavaScript/setNav.js"></script>
+    <script src="./JavaScript/hideNav.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top" id="navigationBar"></nav>
-    <div class="container-fluid"></div>
+    <nav class="navbar navbar-expand-lg sticky-top autohide" id="navigationBar"></nav>
+    <!-- Content -->
+    <div class="container-fluid">
+        <!-- Banner -->
+        <div class="row" id="banner">
+            <div class="col-12 center">
+                <h1 class="text-uppercase thicker stretch">About Us</h1>
+            </div>
+        </div>
+        <br>
+        <!-- Our Story -->
+        <div class="container">
+            <div class="row" id="storyContainer">
+                <div class="col-md-12 centerCol">
+                    <h2 class="text-uppercase thicker stretch">Our Story</h2>
+                    <p>Snip Snip was founded by Marcie Stuward, a visionary 34-year-old driven by a passion for exquisite hair artistry and unparalleled customer service. Marcie envisioned a salon experience that transcended the ordinary, where every client felt seen, heard, and utterly transformed. With this dream, she established Snip Snip in the heart of Auckland CBD. From its inception, the salon has been dedicated to offering a premium sanctuary for hair care, providing everything from intricate, personalized haircuts and professional-grade colouring to luxurious perms and revitalizing treatments. Marcie's commitment to exceptional quality and an extremely personalized approach is the cornerstone of Snip Snip, justifying its premium price tag and cementing its reputation as a haven for bespoke beauty.</p>
+                </div>
+            </div> 
+        </div> 
+        <!-- Portfolio -->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-uppercase thicker stretch">Portfolio</h2>
+            </div>
+        </div>
+        <div class="row gy-3">
+            <div class="col-md-6">
+                <div class="row gy-3">
+                    <div class="col-md-6">
+                        <img src="./CSS/Images/pexels-the-earthy-jay-380084919-30727520.jpg" class="w-100">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./CSS/Images/pexels-aman-malik-295717703-15669898.jpg" class="w-100 h-100">        
+                    </div>
+                </div>
+                <div class="row gy-3" id="portfolio">
+                    <div class="col-md-6">
+                        <img src="./CSS/Images/pexels-cottonbro-10678506.jpg" class="w-100">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./CSS/Images/pexels-cottonbro-10675701.jpg" class="w-100 h-100">        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="./CSS/Images/pexels-cesar-o-neill-26650613-34082630.jpg" class="w-100 h-100">
+            </div>
+        </div>
+    </div>
 </body>
 </html>

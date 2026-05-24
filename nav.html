@@ -2,14 +2,14 @@
 <div class="container-fluid">
     <!-- Logo -->
     <a class="navbar-brand" href="./index.html">
-        <img src="./CSS/Images/Logo.svg" alt="SNIP SNIP LOGO">
+        <img src="./CSS/Images/Logo.svg" alt="Snip Snip Logo" id="navbarLogo">
     </a>
     <!-- Hamburger button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <button class="navbar-toggler" id="test" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Offcanvas menu -->
-    <div class="offcanvas offcanvas-top"  id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-top" id="offcanvasNavbar"  data-bs-scroll="false" aria-labelledby="offcanvasNavbarLabel">
         <!-- Offcanvas header -->
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -19,15 +19,15 @@
         <div class="offcanvas-body">
             <!-- Nav Links -->
             <div class="navbar-nav mx-auto" id="navLinks">
-                <a class="nav-link" id="home" href="index.html">HOME</a>
-                <a class="nav-link" id="aboutUs" href="aboutUs.html">ABOUT US</a>
-                <a class="nav-link" id="services" href="services.html">SERVICES</a>
-                <a class="nav-link" id="contactUs" href="indexTest.html">CONTACT US</a>
+                <a class="nav-link text-uppercase" id="home" href="index.html">Home</a>
+                <a class="nav-link text-uppercase" id="aboutUs" href="aboutUs.html">About Us</a>
+                <a class="nav-link text-uppercase" id="services" href="services.html">Services</a>
+                <a class="nav-link text-uppercase" id="contactUs" href="contactUs.html">Contact Us</a>
             </div>
         </div>
     </div>
     <!-- Book now button -->
-    <div class="navbar-nav" style="padding-right: 20px;">
-        <a class="nav-link" id="bookNow" href="bookNow.html"><span>BOOK NOW</span></a>
+    <div class="navbar-nav">
+        <a class="nav-link text-uppercase" id="bookNow" href="bookNow.html"><span>Book Now</span></a>
     </div>
 </div>

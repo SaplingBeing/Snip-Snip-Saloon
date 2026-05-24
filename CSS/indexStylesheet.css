@@ -5,51 +5,177 @@
     font-weight: bold;
     text-decoration: underline;
 } 
-/* Body Background */
-body{
-    background-image: url(./Images/bannerIndex_L.jpg), url(./Images/bg.jpg);
-    background-repeat: no-repeat, repeat;
-    background-size: 100vw 90vh;
+/* Banner */
+#bannerContainer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
 }
-@media (max-width: 600px) {
-    body{
-        background-image: url(./Images/bannerIndex_SM.jpg);
-        background-repeat: no-repeat;
-        background-size: 100vw 90vh;
-    }
+#bannerContainer img{
+    width: clamp(400px, 50vw, 700px);
+    height: auto; 
 }
-/* Banner Container */
-#banner{
-    display: flex;
-    height: 70vh; 
-    align-items: center; 
-    justify-content: center; 
+#fg{
+    position: absolute;
+    z-index: 1;
+    filter: drop-shadow(0px 5px 9px var(--shadowColour));
 }
-/* Bar Code */
-#barcodeContainer{
-    background-color: var(--accentColour);
-    width: 400px;
-    height: 100px;
-    text-align: center;
-    padding-top: 10px;
+#backdrop{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
 }
-#barcode{
+#backdrop img{
+    width: 100vw;
+    height: 18vw;
+    border-radius: 100% 100% 0 0;
+}
+/* Hero text */
+#heroTextContainer{
+    position: absolute;
+    z-index: 0;
+    top: -20px;
+}
+#heroText{
+    font-size: clamp(40px, 6vw, 10rem);
+    transform: scaleY(3) scaleX(1.5);
+    -webkit-text-stroke: .5px var(--textColour);
+    letter-spacing: 2px;
+}
+#heroTextDecal{
+    font-style: italic; 
+    text-decoration: underline;
+}
+#heroTextContainer2{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
+#heroText2{
     color: var(--textColourWhite);
-    font-family: "Libre Barcode 128";
-    font-size: 100px;
-    font-weight: normal;
+    font-size: clamp(30px, 5vw, 10rem);
+    -webkit-text-stroke: .5px var(--textColourWhite);
+    font-style: italic;
 }
-/* Service Row */
-.rowBg{
-    background-color: var(--backgroundVariant1Colour);
+/* Services */
+/* Bg */
+#serviceContainer{
     background-image: url(./Images/bg4.jpg);
-    background-repeat: repeat;
+    padding: 150px 0 150px 0;
+}
+/* Card */
+.serviceCard{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: clamp(25rem,65vw,50rem);
+    padding: 20px;
+    border-radius: 30px;
+    background-color: var(--accentColour);
+}
+#serviceBtn{
+    position: absolute;
+    z-index: 2;
+    bottom: 10vh;
+
+    color: var(--textColour);
+    font-family: var(--fontFmText);
+    font-size: clamp(1rem,5vw,2rem);
+    font-weight: bold;
+
+    background-color: var(--textColourWhite);
+    border: 1px solid var(--textColour);
+    border-radius: 50px;
+    padding: 10px 10px 0px 10px;
+}
+.serviceCardText{
+    position: absolute;
+    z-index: 2;
+    color: var(--textColourWhite);
+    font-family: var(--fontFmText);
+}
+#serviceCardText3{
+    bottom: 0;
+    left: 20px;
+}
+.serviceCard img{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    aspect-ratio: 2/3;
 }
 #serviceImg{
-    width: 110%;
+    bottom: 0;
+    width: clamp(15rem, 30vw, 40rem);
+    height: auto;
+    border-radius: 30px 0 30px 0;
+}
+#serviceImg2{
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+#serviceImg3{
+    top: 0;
+    width: 100%;
+    height: 85%;
+    border-radius: 30px 30px 0 0;
+}
+/* About Us */
+#aboutusContainer{
+    background-image: url(./Images/bg4.jpg);
+    padding: 0 0 150px 0;
+}
+.aboutusCard{
+    background-color: var(--secondaryColour);
+    border-radius: 30px;
+    width: auto;
     height: auto;
     aspect-ratio: 1/1;
-    filter: drop-shadow(0px 0px 20px #080808);
+    margin-bottom: 20px;
 }
-
-
+.aboutusImg{
+    width: 70%;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+.aboutusText{
+    color: var(--textColourWhite);
+    font-family: var(--fontFmText);
+    padding: 10px 0 0 0;
+}
+#aboutusText{
+    font-family: var(--fontFmText);
+}
+#aboutUsContentContainer{
+    position: relative  ;
+}
+#mediaContainer{
+    padding: 20px 0 0 0;
+}
+/* Reviews */
+#reviewContainer{
+    padding: 0 0 150px 0;
+}
+#googleLogo{
+    font-family: "Google Sans";
+    font-size: clamp(60px, 6vw, 10rem);
+    margin: 0;
+}
+.star{
+    color: var(--textColourInactive );
+    font-size: clamp(20px, 2vw, 10rem);
+}
+.card{
+    width: 100%;
+    height: 55vh;
+    min-height: 300;
+    aspect-ratio: 1/2;
+}
+/* Call to Action */
+#coaContainer{
+    background-image: url(./Images/bg4.jpg);
+    padding: 150px 0 150px 0;
+}
