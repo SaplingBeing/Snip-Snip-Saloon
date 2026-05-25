@@ -45,14 +45,16 @@
             </div>
         </div>
         <!-- Services -->
-        <div class="row gy-3" id="serviceContainer">
+        <div class="row gy-3 gx-3" id="serviceContainer">
+            <!-- Primary Service Card -->
             <div class="col-md-6 animationFade">
                 <div class="serviceCard">
-                    <h1 class="text-uppercase serviceCardText">We do it all. From <span class="fst-italic">cutting</span> to <span class="fst-italic">dyeing</span>.</h1>
-                    <button class="text-uppercase" id="serviceBtn">View services</button>
+                    <h1 class="text-uppercase serviceCardText">We do it all.<br>From <span class="fst-italic" style="text-decoration: underline dashed;">cuts</span> to<br><span class="fst-italic whiteThicker" style="color: transparent;font-family: var(--fontFmHeading);">colour</span>.</h1>
+                    <a href="./services.html"><button class="text-uppercase button" id="serviceBtn">View services</button></a>
                     <img src="./CSS/Images/s.png" id="serviceImg">
                 </div>
             </div>
+            <!-- Tertiary Service Card -->
             <div class="col-md-6 animationFade">
                 <div class="row gx-3">
                     <div class="col-6">
@@ -72,20 +74,27 @@
         </div>
         <!-- About Us -->
         <div class="row gy-3" id="aboutusContainer">
+            <!-- Hairdressers -->
             <div class="col-md-6 animationFade">
                 <div class="row">
                     <div class="col-6">
                         <div class="aboutusCard centerCol">
-                            <img src="./CSS/Images/marcieHairdresser.png" class="rounded-circle aboutusImg">
-                            <h3 class="aboutusText">Marcie Stuward</h3>
-                            <h4 class="aboutusText">Founder | Senior</h4>
+                            <img src="./CSS/Images/marcieHairdresser.png" class="aboutusImg">
+                            <div class="cardBottom">
+                            </div>
+                            <h3 class="text-uppercase aboutusTextHead">Marcie Stuward</h3>
+                            <p class="aboutusTextDesc">@MarcieStu</p>
+                            <p class="fw-bold aboutusTextDesc">Founder | Senior | 10+ Years</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="aboutusCard centerCol">
-                            <img src="./CSS/Images/amyHairdresser.png" class="rounded-circle aboutusImg">
-                            <h3 class="aboutusText">Amy Fu</h3>
-                            <h4 class="aboutusText">Co-Founder | Senior</h4>
+                            <img src="./CSS/Images/amyHairdresser.png" class="aboutusImg">
+                            <div class="cardBottom">
+                            </div>
+                            <h3 class="text-uppercase aboutusTextHead">Amy Fu</h3>
+                            <p class="aboutusTextDesc">@AyFu</p>
+                            <p class="fw-bold aboutusTextDesc">Co-Founder | Senior | 7+ Years</p>
                         </div>
                     </div>
                 </div>
@@ -93,64 +102,83 @@
                     <div class="col-6">
                         <div class="aboutusCard centerCol">
                             <img src="./CSS/Images/chrisHairdresser.png" class="rounded-circle aboutusImg">
-                            <h3 class="aboutusText">Chris Andrew</h3>
-                            <h4 class="aboutusText">Junior</h4>
+                            <div class="cardBottom">
+                            </div>
+                            <h3 class="text-uppercase aboutusTextHead">Chris Andrew</h3>
+                            <p class="aboutusTextDesc">@ChrisDrew</p>
+                            <p class="fw-bold aboutusTextDesc">Junior | 4+ Years</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="aboutusCard centerCol">
                             <img src="./CSS/Images/sadieHairdresser.png" class="rounded-circle aboutusImg">
-                            <h3 class="aboutusText">Sadie Nguyen</h3>
-                            <h4 class="aboutusText">Junior</h4>
+                            <div class="cardBottom">
+                            </div>
+                            <h3 class="text-uppercase aboutusTextHead">Sadie Nguyen</h3>
+                            <p class="aboutusTextDesc">@Yenie</p>
+                            <p class="fw-bold aboutusTextDesc">Junior | 3+ Years</p>
                         </div>    
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 animationFade" id="aboutUsContentContainer">
-                <h1 class="text-uppercase thicker stretch">Meet the team</h1>
-                <h3 id="aboutusText">Meet the visionary artists behind Snip Snip! Our passionate team delivers bespoke styling, expert color, and luxurious experiences, making every visit unforgettable.</h3>
-                <button class="text-uppercase button">Learn more</button>
+            <div class="col-md-6">
+                <h1 class="text-uppercase thicker stretch">Meet the <span class="fst-italic ">team</span></h1>
+                <hr class="hrBlack">
+                <p>Meet the visionary artists behind <span class="text-uppercase thicker" style="font-family: var(--fontFmHeading);">Snip Snip</span>. Our passionate team delivers bespoke styling, expert colour, and luxurious experiences, making every visit unforgettable.</p>
+                <a href="./aboutUs.html"><button class="text-uppercase button">About Us</button></a>
                 <div id="mediaContainer">
-                    <h3>Follow Us</h3>
-                    <i class="bi bi-twitter-x logo"></i>
-                    <i class="bi bi-instagram logo"></i>
-                    <i class="bi bi-facebook logo"></i>
+                    <p class="fw-bold" style="line-height: 0;">Follow Us</p>
+                    <a href="https://x.com" target="_blank"><i class="bi bi-twitter-x logo"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram logo"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook logo"></i></a>  
                 </div>
             </div>
         </div>
         <!-- Reviews -->
         <div class="row" id="reviewContainer">
-            <div class="col-12 animationFade">
+            <div class="col-12">
                 <div class="centerCol">
-                    <h1 id="googleLogo">Google</h1>
-                    <span class="star"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-                    <p class="text-uppercase">300+ reviews</p>
+                    <h2 id="googleLogo">Google</h2>
+                    <span class="cardStar"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                    <p class="text-uppercase fw-bold">10,000+ reviews</p>
                 </div>
-                <div class="row g-3 center">
-                    <div class="col-lg-3">
+                <div class="row g-3 center animationFade">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h6>
-                                <h5>A Cut Above the Rest</h5>
-                                <p class="card-text">From the moment you step into Snip Snip in Auckland CBD, you know you're in for something truly special. This isn't just a hair salon; it's an experience in pampering and personalized artistry. I recently treated myself to a full hair transformation – a balayage and a precision cut – and I'm absolutely thrilled with the results.</p>
+                                <h3 class="card-title thicker">A Cut Above the Rest</h2>
+                                <h3 class="cardStar"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h3>
+                                <p class="card-text">From the moment you step into <span class="text-uppercase thicker" style="font-family: var(--fontFmHeading);">Snip Snip</span> in Auckland CBD, you know you're in for something truly special. This isn't just a hair salon; it's an experience in pampering and personalized artistry. I recently treated myself to a full hair transformation – a balayage and a precision cut – and I'm absolutely thrilled with the results.</p>
+                                <div class="d-flex align-items-center gap-3 customerCardContainer">
+                                    <img src="./CSS/Images/lisaWhiteCustomer.png" class="customerImg">
+                                    <p class="fw-bold">Lisa W.</p>   
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h6>
-                                <h5>Unparalleled Service at Snip Snip</h5>
+                                <h3 class="card-title thicker">A Premium <span class="text-uppercase" style="font-family: var(--fontFmHeading);">Snip Snip</span></h3>
+                                <h3 class="cardStar"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h3>
                                 <p class="card-text">The attention to detail throughout my appointment was phenomenal. From the luxurious hair wash that felt like a head massage to the meticulous application of the color and the expert precision of the cut, every step was executed with professionalism and care. You can tell they use only the highest quality products, leaving my hair feeling incredibly soft, healthy, and vibrant.</p>
+                                <div class="d-flex align-items-center gap-3 customerCardContainer">
+                                    <img src="./CSS/Images/taraLalCustomer.png" class="customerImg">
+                                    <p class="fw-bold">Tara L.</p>   
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h6>
-                                <h5>My New Hair Haven in the CBD!   </h5>
-                                <p class="card-text">Yes, Snip Snip is a premium salon, but it's unequivocally worth every penny. The personalized service, the incredible skill of the stylists, and the overall luxurious experience make it an absolute standout. If you're looking for more than just a haircut – if you're seeking a transformative and truly indulgent hair experience in Auckland – look no further than Snip Snip. I've found my new go-to salon, and I can't recommend it highly enough!</p>
+                                <h3 class="card-title thicker">Hair Haven in the CBD!</h3>
+                                <h3 class="cardStar"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h3>
+                                <p class="card-text">Yes, <span class="text-uppercase thicker" style="font-family: var(--fontFmHeading);">Snip Snip</span> is a premium salon, but it's unequivocally worth every penny. The personalized service, the incredible skill of the stylists, and the overall luxurious experience make it an absolute standout. If you're seeking a transformative and truly indulgent hair experience in Auckland – look no further than <span class="text-uppercase thicker" style="font-family: var(--fontFmHeading);">Snip Snip</span>. I've found my new go-to salon, and I can't recommend it highly enough!</p>
+                                <div class="d-flex align-items-center gap-3 customerCardContainer">
+                                    <img src="./CSS/Images/benjimanPonsmithCustomer.png" class="customerImg">
+                                    <p class="fw-bold">Benjamin P.</p>   
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,11 +187,12 @@
         </div>
         <!-- Call to Action -->
         <div class="row" id="coaContainer">
-            <div class="col-12 animationFade">
+            <div class="col-12">
                 <div class="centerCol">
-                    <h1 class="text-uppercase thicker stretch">What are you waiting for?</h1>
-                    <p style="text-align: center;"> Discover the Snip Snip difference in Auckland CBD. From stunning haircuts to vibrant colors and luxurious perms, our personalized services promise an experience of exceptional quality and style. Book your premium hair journey today!</p>
-                    <button class="text-uppercase button">Book Now</button>
+                    <h1 class="text-uppercase text-center thicker stretch">What are you waiting for?</h1>
+                    <br>
+                    <p style="text-align: center;"> Discover the <span class="text-uppercase thicker" style="font-family: var(--fontFmHeading);">Snip Snip</span> difference in Auckland CBD. From stunning haircuts to vibrant colors and luxurious perms, our personalized services promise an experience of exceptional quality and style. Book your premium hair journey today!</p>
+                    <a href="./bookNow.html"><button class="text-uppercase bookNowBtn"><i class="bi bi-bookmark"></i> Book Now</button></a>
                 </div>
             </div>
         </div>
