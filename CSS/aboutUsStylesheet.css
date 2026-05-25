@@ -12,8 +12,8 @@ body{
 }
 @media (max-width: 600px) {
     body{
-        background-image: url(./Images/bannerIndex_SM.jpg);
-        background-repeat: no-repeat;
+        background-image: url(./Images/bannerIndex_SM.jpg), url(./Images/bg.jpg);
+        background-repeat: no-repeat, repeat;
         background-size: 100vw 90vh;
     }
 }
@@ -29,50 +29,49 @@ body{
     padding: 100px 0 0 0;
 }
 /* Portfolio */
-#portfolio{
-    margin: 20px 0 0 0;
+.portfolioContainer{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 60vw;
 }
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  height: auto;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+.portfolioContainer img:hover{
+    filter: opacity(0.1);
+    transition: filter 0.3s ease-in;
 }
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.portfolioContainer2{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 30vw;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.portfolioContainer3{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 30vw;
 }
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+.portfolioContainer img, .portfolioContainer2 img, .portfolioContainer3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.2s ease-out;
 }
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+.dresserContainer{
+    position: absolute;
+    z-index: -1 !important;
+    bottom: 0;
+    left: 10px;
 }
-
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
+.dresserContainer img{
+    width: clamp(30px, 20vw,20rem);
+    height: auto;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--textColourWhite);
+    border-radius: 50%;
+    filter: drop-shadow(0px 5px 2px var(--shadowColour));
+    
 }
