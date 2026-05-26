@@ -11,6 +11,20 @@
     background-color: var(--secondaryColour);
     background-image: url(./Images/bg3.jpg);  
 }
+.summaryContainer{
+    top: 2rem;
+}
+/* Summary */
+.summaryHeading{
+    font-size: var(--fontBase);
+}
+li{
+    font-family: var(--fontFmText);
+    font-size: var(--fontBase);
+}
+.priceText{
+    font-size: clamp(0.7rem,2vw,1.1rem);
+}
 /* Navigation Buttons */
 i{
     color: var(--textColourInactive);
@@ -25,6 +39,7 @@ i:hover{
 /* Tabs */
 .nav-link{
     color: var(--textColourWhite) !important;
+    font-size: var(--fontBase);
 }
 .nav-tabs .nav-link:hover {
     border-color: transparent;
