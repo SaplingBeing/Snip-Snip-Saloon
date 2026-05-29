@@ -85,7 +85,7 @@ $(document).ready(function(){
             total -= price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $("label[for='standardCutBtn']").text("+");
+            $("label[for='fringeTrimBtn']").text("+");
             $(".haircutBtn:not(label[for='fringeTrimBtn'])").removeClass("disabled");
         }
         else{
@@ -94,7 +94,7 @@ $(document).ready(function(){
             total += price;
             $("#totalPrice").text(total);
             isServiceEmpty();
-            $("label[for='standardCutBtn']").text("-");
+            $("label[for='fringeTrimBtn']").text("-");
             $(".haircutBtn:not(label[for='fringeTrimBtn'])").addClass("disabled");
         }
         console.log(serviceList);

@@ -25,7 +25,7 @@
 <body>
     <div class="container">
         <!-- NOTE: CHANGE REDIRECTED PAGE -->
-        <form class="needs-validation" novalidate action="./services.html">
+        <form class="needs-validation" novalidate action="https://formspree.io/f/{form_id}" method="POST">
             <!-- Navigation Buttons -->
             <div class="row">
                 <div class="col-12 d-flex justify-content-between">
@@ -52,23 +52,23 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <br>
-                                        <h2 class="text-uppercase thickerWhite stretch">Services</h2>
-                                        <p class="text-uppercase">Select a service(s) from below</p>
+                                        <h3 class="text-uppercase thickerWhite stretch">Services</h3>
+                                        <p>Select a service(s) from below</p>
                                         <hr>
                                         <div class="accordion" id="services">
                                             <!-- Haircuts -->
                                             <div class="accordion-item">
                                                 <div class="accordion-header">
                                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#haircutCollapse">
-                                                        <h2 class="text-uppercase thicker stretch">Haircuts</h2>
+                                                        <h3 class="text-uppercase thicker stretch">Haircuts</h3>
                                                     </button>
                                                 </div>
                                                 <div id="haircutCollapse" class="accordion-collapse collapse" data-bs-parent="services">
                                                     <div class="accordion-body">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Fringe Trim</h5>
-                                                                <p class="card-text">NZD 30| 15 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Fringe Trim</h4>
+                                                                <p class="card-text priceText">NZD 30| 15 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check haircut" id="fringeTrimBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -78,8 +78,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Buzz cut</h5>
-                                                                <p class="card-text">NZD 40 | 30 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Buzz cut</h4>
+                                                                <p class="card-text priceText">NZD 40 | 30 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check haircut" id="buzzCutBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -89,8 +89,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Standard Haircut</h5>
-                                                                <p class="card-text">NZD 50 | 30 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Standard Haircut</h4>
+                                                                <p class="card-text priceText">NZD 50 | 30 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check haircut" id="standardCutBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -100,8 +100,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Fade</h5>
-                                                                <p class="card-text">NZD 70 | 60 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Fade</h4>
+                                                                <p class="card-text priceText">NZD 70 | 60 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check haircut" id="fadeCutBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -111,8 +111,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Scissor Cut</h5>
-                                                                <p class="card-text">NZD 80 | 60 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Scissor Cut</h4>
+                                                                <p class="card-text priceText">NZD 80 | 60 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check haircut" id="scissorCutBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -127,15 +127,15 @@
                                             <div class="accordion-item">
                                                 <div class="accordion-header">
                                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beardCollapse">
-                                                        <h2 class="text-uppercase thicker stretch">Men's Beard</h2>
+                                                        <h3 class="text-uppercase thicker stretch">Men's Beard</h3>
                                                     </button>
                                                 </div>
                                                 <div id="beardCollapse" class="accordion-collapse collapse" data-bs-parent="services">
                                                     <div class="accordion-body">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Beard Trim</h5>
-                                                                <p class="card-text">NZD 30 | 30 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Beard Trim</h4>
+                                                                <p class="card-text priceText">NZD 30 | 30 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="trimBeardBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -145,8 +145,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Full Shave</h5>
-                                                                <p class="card-text">NZD 50 | 60 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Full Shave</h4>
+                                                                <p class="card-text priceText">NZD 50 | 60 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="fullBeardBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -161,15 +161,15 @@
                                             <div class="accordion-item">
                                                 <div class="accordion-header">
                                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colourCollapse">
-                                                        <h2 class="text-uppercase thicker stretch">Colour</h2>
+                                                        <h3 class="text-uppercase thicker stretch">Colour</h3>
                                                     </button>
                                                 </div>
                                                 <div id="colourCollapse" class="accordion-collapse collapse" data-bs-parent="services">
                                                     <div class="accordion-body">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Toner</h5>
-                                                                <p class="card-text">NZD 100 | 30 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Toner</h4>
+                                                                <p class="card-text priceText">NZD 100 | 30 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="tonerBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -179,8 +179,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Global</h5>
-                                                                <p class="card-text">NZD 200 | 60 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Global</h4>
+                                                                <p class="card-text priceText">NZD 200 | 60 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="globalBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -190,8 +190,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Bleach</h5>
-                                                                <p class="card-text">NZD 250 | 120 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Bleach</h4>
+                                                                <p class="card-text priceText">NZD 250 | 120 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="bleachBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -201,8 +201,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Foils</h5>
-                                                                <p class="card-text">NZD 300 | 180 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Foils</h4>
+                                                                <p class="card-text priceText">NZD 300 | 180 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="foilsBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -212,8 +212,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Balayage</h5>
-                                                                <p class="card-text">NZD 400 | 240 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Balayage</h4>
+                                                                <p class="card-text priceText">NZD 400 | 240 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="balayageBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -228,15 +228,15 @@
                                             <div class="accordion-item">
                                                 <div class="accordion-header">
                                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#treatmentCollapse">
-                                                        <h2 class="text-uppercase thicker stretch">Treatment</h2>
+                                                        <h3 class="text-uppercase thicker stretch">Treatment</h3>
                                                     </button>
                                                 </div>
                                                 <div id="treatmentCollapse" class="accordion-collapse collapse" data-bs-parent="services">
                                                     <div class="accordion-body">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Cold Perm</h5>
-                                                                <p class="card-text">NZD 250 | 180   mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Cold Perm</h4>
+                                                                <p class="card-text priceText">NZD 250 | 180   mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="coldPermBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -246,8 +246,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Digital Perm</h5>
-                                                                <p class="card-text">NZD 300 | 240 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Digital Perm</h4>
+                                                                <p class="card-text priceText">NZD 300 | 240 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="digitalPermBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -257,8 +257,8 @@
                                                         </div>
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Keratin Treatment</h5>
-                                                                <p class="card-text">NZD 500 | 240 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Keratin Treatment</h4>
+                                                                <p class="card-text priceText">NZD 500 | 240 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="keratinBtn">
                                                                 <div class="d-flex justify-content-end">
@@ -273,19 +273,19 @@
                                             <div class="accordion-item">
                                                 <div class="accordion-header">
                                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stylingCollapse">
-                                                        <h2 class="text-uppercase thicker stretch">Styling</h2>
+                                                        <h3 class="text-uppercase thicker stretch">Styling</h3>
                                                     </button>
                                                 </div>
                                                 <div id="stylingCollapse" class="accordion-collapse collapse" data-bs-parent="services">
                                                     <div class="accordion-body">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <h5 class="card-title text-uppercase">Blow Dry (Incl. Shampoo)</h5>
-                                                                <p class="card-text">NZD 50 | 20 mins</p>
+                                                                <h4 class="card-title text-uppercase thicker stretch">Blow Dry (Incl. Shampoo)</h4>
+                                                                <p class="card-text priceText">NZD 50 | 20 mins</p>
                                                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, culpa!</p>
                                                                 <input type="checkbox" class="btn-check" id="blowDryBtn">
                                                                 <div class="d-flex justify-content-end">
-                                                                    <label class="btn" for="blowDryBtn">+</label>
+                                                                    <label class="btn cardBtn" for="blowDryBtn">+</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -301,18 +301,18 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <br>
-                                        <h1 class="text-uppercase">Staff</h1>
-                                        <p class="text-uppercase">Select your preferred staff from below</p>
+                                        <h3 class="text-uppercase stretch thickerWhite">Staff</h3>
+                                        <p>Select your preferred staff from below</p>
                                         <hr>
                                         <!-- No Preference -->
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-6">
-                                                        <h5 class="card-title text-uppercase">No Preference</h5>
-                                                        <p class="card-text">Maximum Availability</p>
+                                                    <div class="col-8">
+                                                        <h4 class="card-title text-uppercase thicker stretch">No Preference</h4>
+                                                        <p class="card-text priceText">Maximum Availability</p>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-4">
                                                         <input type="checkbox" value="None" class="btn-check staff" id="noStaffBtn">
                                                         <div class="d-flex justify-content-end h-100 align-items-center"> 
                                                             <label class="btn cardBtn staffBtn" for="noStaffBtn">+</label>
@@ -329,8 +329,8 @@
                                                         <img src="./CSS/Images/marcieHairdresser.png" class="img-fluid rounded-circle profileCard">
                                                     </div>
                                                     <div class="col-9">
-                                                        <h5 class="card-title text-uppercase">Marcie Stuward</h5>
-                                                        <p class="card-text">Senior hairdresser</p>
+                                                        <h5 class="card-title text-uppercase thicker stretch">Marcie Stuward</h5>
+                                                        <p class="card-text priceText">Senior hairdresser</p>
                                                         <input type="checkbox" value="Marcie Stuward" class="btn-check staff" id="marcieStaffBtn">
                                                         <div class="d-flex justify-content-end">
                                                             <label class="btn cardBtn staffBtn" for="marcieStaffBtn">+</label>
@@ -347,8 +347,8 @@
                                                         <img src="./CSS/Images/sadieHairdresser.png" class="img-fluid rounded-circle profileCard">
                                                     </div>
                                                     <div class="col-9">
-                                                        <h5 class="card-title text-uppercase">Sadie Nguyen</h5>
-                                                        <p class="card-text">Junior hairdresser</p>
+                                                        <h5 class="card-title text-uppercase thicker stretch">Sadie Nguyen</h5>
+                                                        <p class="card-text priceText">Junior hairdresser</p>
                                                         <input type="checkbox" value="Sadie Nguyen" class="btn-check staff" id="sadieStaffBtn">
                                                         <div class="d-flex justify-content-end">
                                                             <label class="btn cardBtn staffBtn" for="sadieStaffBtn">+</label>
@@ -365,15 +365,15 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <br>
-                                        <h1 class="text-uppercase">Date & Time</h1>
-                                        <p class="text-uppercase">Select a date & time for your appointment</p>
+                                        <h3 class="text-uppercase thickerWhite stretch">Date & Time</h3>
+                                        <p>Select a date & time for your appointment</p>
                                         <hr>
                                         <!-- Date -->
-                                        <label for="datePicker" class="form-label text-uppercase">Select a date</label>
+                                        <label for="datePicker" class="form-label">Select a date</label>
                                         <input type="date" onkeydown="return false;" class="form-control" id="datePicker" required>
                                         <!-- Time -->
                                         <br>
-                                        <p class="text-uppercase collapse" id="timePlaceHolder">Select a time</p>
+                                        <p class="collapse" id="timePlaceHolder">Select a time</p>
                                         <input type="checkbox" value="9:00" class="btn-check time" id="nine">
                                         <label class="btn timeBtn collapse" for="nine">09:00</label>
                                         <br>
@@ -391,13 +391,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- First Name & Last Name -->
+                            <!-- Contact -->
                             <div class="tab-pane" id="navContact">
                                 <div class="row">
                                     <div class="col-12">
                                         <br>
-                                        <h1 class="text-uppercase">Contact details</h1>
-                                        <p class="text-uppercase">Please fill up your contact details below</p>
+                                        <h4 class="text-uppercase stretch thickerWhite">Contact details</h4>
+                                        <p>Please fill up your contact details below</p>
                                         <hr>
                                     </div>
                                 </div>

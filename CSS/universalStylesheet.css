@@ -75,7 +75,7 @@ h1{
 h2{
     font-size: var(--fontMd);
 }
-p{
+p, .form-label{
     font-size: var(--fontBase);
 }
 a{
