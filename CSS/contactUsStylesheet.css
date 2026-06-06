@@ -1,6 +1,57 @@
 /* Justin D. Grumal 240005134 */
+/* Navigation Bar */
 #contactUs{
     color: #1e1e1e;
     font-weight: 600;
     text-decoration: underline;
 } 
+body{
+    background-image: url(./Images/magicpattern-noise-1780464035938.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#contactContainer{
+    position: relative;
+}
+
+#contactChildContainer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 90%;
+    height: 95%;
+    padding: 20px;
+
+    opacity: 0.94;
+    border-radius: 30px 0 0 0;
+
+    background-image: url(./Images/bg4.jpg);
+}
+
+#contactChildContainer iframe{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    border: none;
+    border-radius: 30px 0 0 0;
+
+    width: 55%;
+    height: 65%;
+}
+
+@media (width <= 768px) {
+
+    #contactChildContainer iframe{
+        position: relative;
+
+        border: none;
+        border-radius: 0;
+
+        width: 100%;
+        height: 45%;
+        padding: 0%;
+    }
+    
+}

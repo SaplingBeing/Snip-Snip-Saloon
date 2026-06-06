@@ -22,10 +22,27 @@
     --fontFmHeading: "Bodoni Moda";
     --fontFmText: "Josefin Sans"
 }
-/* Disables Scrollbar */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition{
+    navigation: auto;
+    }
+    ::view-transition-group(root){
+        animation-duration: 1s;
+        animation-timing-function: ease;
+    }
+    ::view-transition-old(root){
+        animation-name:fadeOut;
+    }
+    ::view-transition-new(root){
+        animation-name:fadeIn;
+    }
+}
+
+/* Disable Scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
+
 html, body{
     max-width: 100%;
 }
@@ -80,6 +97,7 @@ p, .form-label{
 }
 a{
     color: inherit;
+    text-decoration: inherit;
 }
 .whiteText{
     color: var(--textColourWhite);
@@ -97,51 +115,47 @@ a{
     font-size: clamp(20px,4vw,30px);
     padding: 0 20px 0 0 ;
 }
+.miniLogo{
+    font-family: var(--fontFmHeading);
+    -webkit-text-stroke: .5px var(--textColour);
+    transform: scaleY(1.5);
+}
 /* Button */
-.button{
-    color: var(--textColour);
+.button, .buttonAlt, .bookNowBtn{
     font-family: var(--fontFmText);
-    font-size: clamp(1rem,5vw,2rem);
-    font-weight: bold;
-
-    background-color: var(--textColourWhite);
-    filter: drop-shadow(0px 8px 4px var(--shadowColourVar2));
-    padding: 13px 10px 10px 10px;
-    border: none;
+    font-size: clamp(1rem,2vw,1.5rem);
+    background-color: transparent;
+    padding: 11px 8px 8px 8px;
     border-radius: 50px;
-    transition: transform 0.1s ease-out, filter 0.1s ease-out;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.button{
+    color: var(--textColourWhite);
+    border: 1.5px solid var(--textColourWhite);
 }
 .buttonAlt{
-    color: var(--textColourWhite);
-    font-family: var(--fontFmText);
-    font-size: clamp(1rem,5vw,2rem);
-    font-weight: bold;
-
-    background-color: var(--textColour);
-    filter: drop-shadow(0px 8px 4px var(--shadowColourVar2));
-    padding: 13px 10px 10px 10px;
-    border: none;
-    border-radius: 50px;
-    transition: transform 0.1s ease-out, filter 0.1s ease-out;
+    color: var(--textColour);
+    border: 1.5px solid var(--textColour);
 }
 .bookNowBtn{
     color: var(--textColourWhite);
-    font-family: var(--fontFmText);
-    font-size: clamp(1rem,5vw,2rem);
     font-weight: bold;
-
     background-color: var(--primaryColour);
-    filter: drop-shadow(0px 8px 4px var(--shadowColourVar2));
-    padding: 13px 10px 10px 10px;
+    filter: drop-shadow(0px 5px 2px var(--shadowColourVar2));
     border: none;
-    border-radius: 50px;
-    transition: transform 0.1s ease-out, filter 0.1s ease-out;
 }
 .button:hover, .buttonAlt:hover, .bookNowBtn:hover{
     text-decoration: none;
     filter: drop-shadow(0px 10px 4px var(--shadowColourVar2));
     transform: scale(1.05);
-    transition: transform 0.3s ease-in, filter 0.3s ease-in;
+}
+.button:hover{
+    color: var(--textColour);
+    background-color: var(--textColourWhite);
+}
+.buttonAlt:hover{
+    color: var(--textColourWhite);
+    background-color: var(--textColour);
 }
 .btn {
     border: none !important;
@@ -250,25 +264,46 @@ footer{
     padding-right: 20px;
 }
 
+/* Modal*/
+.modal-header{
+    background-image: url(./Images/bg3.jpg);
+    color: var(--textColourWhite);
+}
+.modalSubtitle{
+    color: var(--textColourWhiteVar2);
+    font-size: clamp(0.7rem,2vw,1.1rem);
+}
+.modalText{
+    font-family: var(--fontFmText);
+    font-size: var(--fontBase);
+}
+.modal-header .btn-close{
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+.modalImage{
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--textColourWhite);
+}
+
 /* Animation */
 .animationFade{
     animation: fade;
     animation-timeline: view();
     animation-range: entry;
 }
-.animationZoom {
+.animationZoom{
   animation: fade 1s ease-out forwards;
 }
 @keyframes fade{
     from {scale: 0.8; opacity: 0;}
     to {scale: 1; opacity: 1;}
 }
-.fadeExit{
-    animation: fadeExit;
-    animation-timeline: view();
-    animation-range: exit;
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-@keyframes fadeExit{
-    from {scale: 1; opacity: 1;}
-    to {scale: 0.8; opacity: 0;}
+@keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
 }

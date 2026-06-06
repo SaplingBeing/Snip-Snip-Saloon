@@ -64,6 +64,12 @@ i:hover{
 /* Card */
 .card{
     color: var(--textColour);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.card:hover{
+    z-index: 1;
+    transform: scale(1.05);
+    filter: drop-shadow(0px 10px 10px var(--shadowColour));
 }
 .cardBtn{
     color: var(--textColourWhite);
@@ -82,15 +88,6 @@ i:hover{
 /* Button */
 .btn-check:checked+.btn{
     background-color: var(--accentColour);
-    font-weight: bold;
-}
-/* Continue Button */
-#continueBtn{
-    color: var(--textColourWhite);
-    font-family: var(--fontFmText);
-    background-color: var(--primaryColour);
-}
-#continueBtn:hover{
     font-weight: bold;
 }
 #timePlaceHolder{

@@ -5,6 +5,19 @@
     font-weight: bold;
     text-decoration: underline;
 } 
+/* Background */
+#background{
+    background-image: url(./Images/bg4.jpg);
+    background-position: center;
+    background-repeat: repeat;
+}
+/* Page Padding */
+#serviceContainer, #aboutusContainer, #reviewContainer{
+    padding: 150px 0 0 0;
+}
+#coaContainer{
+    padding: 150px 0 150px 0;
+}
 /* Banner */
 #bannerContainer{
     position: relative;
@@ -20,13 +33,16 @@
     position: absolute;
     z-index: 1;
     filter: drop-shadow(0px 5px 9px var(--shadowColour));
+    transition: transform 0.3s ease-in-out;
+
+    animation-delay: 0.05s;
 }
-#backdrop{
+#backdropContainer{
     position: absolute;
     z-index: -1;
     bottom: 0;
 }
-#backdrop img{
+#backdropContainer img{
     object-fit: cover;
     width: 100vw;
     height: 18vw;
@@ -38,33 +54,29 @@
     z-index: 0;
     top: -20px;
 }
-#heroText{
+#heroTextContainer h1{
     font-size: clamp(40px, 6vw, 10rem);
     transform: scaleY(3) scaleX(1.5);
     -webkit-text-stroke: .5px var(--textColour);
     letter-spacing: 2px;
-}
-#heroTextDecal{
-    font-style: italic; 
-    text-decoration: underline;
+    opacity: 0;
+    animation-delay: 0.4s;
 }
 #heroTextContainer2{
     position: absolute;
     z-index: 1;
     bottom: 0;
 }
-#heroText2{
+#heroTextContainer2 h1{
     color: var(--textColourWhite);
     font-size: clamp(30px, 5vw, 10rem);
     -webkit-text-stroke: .5px var(--textColourWhite);
     font-style: italic;
+    opacity: 0;
+    animation-delay: 0.6s;
 }
 /* Services */
 /* Bg */
-#serviceContainer{
-    background-image: url(./Images/bg4.jpg);
-    padding: 150px 0 150px 0;
-}
 /* Card */
 .serviceCard{
     position: relative;
@@ -75,17 +87,16 @@
     border-radius: 30px;
     background-color: var(--accentColour);
     filter: drop-shadow(0px 5px 2px var(--shadowColour));
-    transition: transform 0.1s ease-out, filter 0.1s ease-out;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 .serviceCard:hover{
     filter: drop-shadow(0px 10px 10px var(--shadowColour));
-    transform: scale(1.01);
-    transition: transform 0.3s ease-in, filter 0.3s ease-in;
+    transform: scale(1.02);
 }
-#serviceBtn{
+#serviceBtnContainer{
     position: absolute;
     z-index: 2;
-    bottom: 10vh;
+    bottom: clamp(20px,2vw,2vw);
 }
 .serviceCardText{
     position: absolute;
@@ -119,14 +130,10 @@
 #serviceImg3{
     top: 0;
     width: 100%;
-    height: 85%;
+    height: 75%;
     border-radius: 30px 30px 0 0;
 }
 /* About Us */
-#aboutusContainer{
-    background-image: url(./Images/bg4.jpg);
-    padding: 0 0 150px 0;
-}
 .aboutusCard{
     position: relative;
     background-color: var(--secondaryColour);
@@ -137,6 +144,8 @@
     height: auto;
     aspect-ratio: 1/1;
     margin-bottom: 20px;
+
+    cursor: pointer;
     transition: transform 0.1s ease-out, filter 0.1s ease-out;
 }
 .aboutusCard:hover, .card:hover{
@@ -176,10 +185,6 @@
     padding: 50px 0 0 0;
 }
 /* Reviews */
-#reviewContainer{
-    background-image: url(./Images/bg4.jpg);
-    padding: 0 0 150px 0;
-}
 #googleLogo{
     font-family: "Google Sans";
     font-size: clamp(60px, 6vw, 10rem);
@@ -203,6 +208,9 @@
 .card-title{
     font-size: clamp(1rem,6vw,2.5rem);
 }
+.card-text{
+    text-align: justify;
+}
 .cardStar{
     color: #FDCC0D;
     font-size: clamp(1rem,5vw,1.9rem);
@@ -217,9 +225,4 @@
 .customerCardContainer{
     position: absolute;
     bottom: 10px;
-}
-/* Call to Action */
-#coaContainer{
-    background-image: url(./Images/bg4.jpg);
-    padding: 150px 0 150px 0;
 }

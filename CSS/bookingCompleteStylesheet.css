@@ -1,0 +1,7 @@
+/* Justin D. Grumal 240005134 */
+body{
+    background-color: var(--backgroundColour);
+    background-image: url(./Images/bg.jpg);
+    background-position: center;
+    background-repeat: repeat;
+}
